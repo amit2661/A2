@@ -14,6 +14,7 @@
     <SchemaViewerObjectModel />
     <SetMembershipControl />
     <SheetIdentifierTracking />
+    <SortTagCleanup />
     <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
     <WindowsPersistSimpleIdentifiers />
     <WorksheetBackgroundTransparency />
@@ -995,6 +996,7 @@
       <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
       <column caption='Yearbuilt' datatype='integer' name='[yearbuilt]' role='measure' type='quantitative' />
       <column aggregation='Sum' caption='Zip' datatype='integer' default-format='*00000' name='[zip]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <column-instance column='[flip_term]' derivation='None' name='[none:flip_term:nk]' pivot='key' type='nominal' />
       <column-instance column='[price]' derivation='Sum' name='[sum:price:qk]' pivot='key' type='quantitative' />
       <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
         <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/AMITRA~1/AppData/Local/Temp/TableauTemp/#TableauTemp_1al51t810dl4171fzw1et0bb1xby.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='02/16/2025 03:32:53 AM' username='tableau_internal_user'>
@@ -1945,6 +1947,20 @@
               <bucket>4</bucket>
             </map>
           </encoding>
+          <encoding attr='color' field='[none:flip_term:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Long-term&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Short-term&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Non-flip&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Medium-term&quot;</bucket>
+            </map>
+          </encoding>
         </style-rule>
       </style>
       <semantic-values>
@@ -2116,6 +2132,14 @@
             <column-instance column='[price]' derivation='Sum' name='[sum:price:qk]' pivot='key' type='quantitative' />
             <column-instance column='[date]' derivation='Year' name='[yr:date:ok]' pivot='key' type='ordinal' />
           </datasource-dependencies>
+          <manual-sort column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:flip_term:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Non-flip&quot;</bucket>
+              <bucket>&quot;Long-term&quot;</bucket>
+              <bucket>&quot;Medium-term&quot;</bucket>
+              <bucket>&quot;Short-term&quot;</bucket>
+            </dictionary>
+          </manual-sort>
           <aggregation value='true' />
         </view>
         <style />
@@ -2153,11 +2177,22 @@
             <column caption='Cash Sale' datatype='integer' name='[cash_sale]' role='measure' type='quantitative' />
             <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
             <column caption='Flip Horizon' datatype='integer' name='[flip_horizon]' role='measure' type='quantitative' />
+            <column caption='Price' datatype='real' name='[price]' role='measure' type='quantitative' />
             <column-instance column='[buy_side_flip]' derivation='Sum' name='[sum:buy_side_flip:qk]' pivot='key' type='quantitative' />
             <column-instance column='[cash_sale]' derivation='Sum' name='[sum:cash_sale:qk]' pivot='key' type='quantitative' />
             <column-instance column='[flip_horizon]' derivation='Sum' name='[sum:flip_horizon:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[price]' derivation='Sum' name='[sum:price:qk]' pivot='key' type='quantitative' />
             <column-instance column='[date]' derivation='Year' name='[yr:date:ok]' pivot='key' type='ordinal' />
           </datasource-dependencies>
+          <filter class='categorical' column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:cash_sale:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:price:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0dpax2p0rn4zi011mbz1x129v3of].[:Measure Names]</column>
+          </slices>
           <aggregation value='true' />
         </view>
         <style>
@@ -2172,7 +2207,7 @@
             </view>
             <mark class='Automatic' />
             <encodings>
-              <color column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:cash_sale:qk]' />
+              <color column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[Multiple Values]' />
             </encodings>
             <style>
               <style-rule element='mark'>
@@ -2187,7 +2222,7 @@
             </view>
             <mark class='Automatic' />
             <encodings>
-              <color column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:cash_sale:qk]' />
+              <color column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[Multiple Values]' />
             </encodings>
             <style>
               <style-rule element='mark'>
@@ -2202,7 +2237,7 @@
             </view>
             <mark class='Automatic' />
             <encodings>
-              <color column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:cash_sale:qk]' />
+              <color column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[Multiple Values]' />
             </encodings>
             <style>
               <style-rule element='mark'>
@@ -2213,7 +2248,7 @@
           </pane>
         </panes>
         <rows>([federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:buy_side_flip:qk] + [federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:flip_horizon:qk])</rows>
-        <cols>[federated.0dpax2p0rn4zi011mbz1x129v3of].[yr:date:ok]</cols>
+        <cols>([federated.0dpax2p0rn4zi011mbz1x129v3of].[:Measure Names] / [federated.0dpax2p0rn4zi011mbz1x129v3of].[yr:date:ok])</cols>
       </table>
       <simple-id uuid='{68DE719B-49DE-4354-B76F-4CD149895E51}' />
     </worksheet>
@@ -2273,7 +2308,7 @@
     </dashboard>
   </dashboards>
   <windows source-height='30'>
-    <window class='worksheet' maximized='true' name='Sheet 5'>
+    <window class='worksheet' name='Sheet 5'>
       <cards>
         <edge name='left'>
           <strip size='200'>
@@ -2339,13 +2374,14 @@
       <active id='-1' />
       <simple-id uuid='{649EB0FA-D60E-4408-B729-301F884C6888}' />
     </window>
-    <window class='worksheet' name='Sheet 7'>
+    <window class='worksheet' maximized='true' name='Sheet 7'>
       <cards>
         <edge name='left'>
           <strip size='160'>
             <card type='pages' />
             <card type='filters' />
             <card type='marks' />
+            <card type='measures' />
           </strip>
         </edge>
         <edge name='top'>
@@ -2361,7 +2397,7 @@
         </edge>
         <edge name='right'>
           <strip size='160'>
-            <card pane-specification-id='1' param='[federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:cash_sale:qk]' type='color' />
+            <card pane-specification-id='1' param='[federated.0dpax2p0rn4zi011mbz1x129v3of].[Multiple Values]' type='color' />
           </strip>
         </edge>
       </cards>
