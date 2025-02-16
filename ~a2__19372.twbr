@@ -10,6 +10,7 @@
     <ObjectModelEncapsulateLegacy />
     <ObjectModelExtractV2 />
     <ObjectModelTableType />
+    <SavingAnalyticObjects />
     <SchemaViewerObjectModel />
     <SetMembershipControl />
     <SheetIdentifierTracking />
@@ -994,6 +995,7 @@
       <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
       <column caption='Yearbuilt' datatype='integer' name='[yearbuilt]' role='measure' type='quantitative' />
       <column aggregation='Sum' caption='Zip' datatype='integer' default-format='*00000' name='[zip]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <column-instance column='[price]' derivation='Sum' name='[sum:price:qk]' pivot='key' type='quantitative' />
       <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
         <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/AMITRA~1/AppData/Local/Temp/TableauTemp/#TableauTemp_1al51t810dl4171fzw1et0bb1xby.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='02/16/2025 03:32:53 AM' username='tableau_internal_user'>
           <relation name='Extract' table='[Extract].[Extract]' type='table' />
@@ -1903,9 +1905,66 @@
         </connection>
       </extract>
       <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:AdhocCluster:1:ok]' type='palette'>
+            <map to='#499894'>
+              <bucket>9</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>1</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>5</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>10</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>6</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>2</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>7</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>11</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>8</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>3</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>12</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>4</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
       <semantic-values>
         <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
       </semantic-values>
+      <analytic-model>
+        <name>
+          <field name='[AnalyticModel:{adeb0314-4352-49eb-8792-0f0d33604936}]' />
+        </name>
+        <analytic-model-specifications class='cluster-specifications'>
+          <analysis-fields>
+            <field name='[federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:price:qk]' />
+          </analysis-fields>
+          <filter-fields />
+          <lod-fields />
+          <number-of-desired-clusters>0</number-of-desired-clusters>
+          <is-dissagregate>false</is-dissagregate>
+        </analytic-model-specifications>
+        <result-fields />
+      </analytic-model>
       <object-graph>
         <objects>
           <object caption='A2_EDA_Residential.csv' id='A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460'>
@@ -2077,32 +2136,86 @@
       <simple-id uuid='{B830822D-3F02-4698-8EB4-900CEC4B3D52}' />
     </worksheet>
     <worksheet name='Sheet 7'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Trend in Flip-activity</run>
+          </formatted-text>
+        </title>
+      </layout-options>
       <table>
         <view>
           <datasources>
             <datasource caption='A2_EDA_Residential' name='federated.0dpax2p0rn4zi011mbz1x129v3of' />
           </datasources>
           <datasource-dependencies datasource='federated.0dpax2p0rn4zi011mbz1x129v3of'>
-            <column caption='Address' datatype='string' name='[address]' role='dimension' type='nominal' />
-            <column-instance column='[address]' derivation='None' name='[none:address:nk]' pivot='key' type='nominal' />
-            <column-instance column='[proptype]' derivation='None' name='[none:proptype:nk]' pivot='key' type='nominal' />
-            <column caption='Proptype' datatype='string' name='[proptype]' role='dimension' type='nominal' />
+            <column caption='Buy Side Flip' datatype='integer' name='[buy_side_flip]' role='measure' type='quantitative' />
+            <column caption='Cash Sale' datatype='integer' name='[cash_sale]' role='measure' type='quantitative' />
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column caption='Flip Horizon' datatype='integer' name='[flip_horizon]' role='measure' type='quantitative' />
+            <column-instance column='[buy_side_flip]' derivation='Sum' name='[sum:buy_side_flip:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[cash_sale]' derivation='Sum' name='[sum:cash_sale:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[flip_horizon]' derivation='Sum' name='[sum:flip_horizon:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[date]' derivation='Year' name='[yr:date:ok]' pivot='key' type='ordinal' />
           </datasource-dependencies>
           <aggregation value='true' />
         </view>
-        <style />
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:cash_sale:qk]' num-steps='5' type='interpolated' />
+          </style-rule>
+        </style>
         <panes>
           <pane selection-relaxation-option='selection-relaxation-allow'>
             <view>
               <breakdown value='auto' />
             </view>
             <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:cash_sale:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-transparency' value='255' />
+                <format attr='mark-markers-mode' value='auto' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:buy_side_flip:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:cash_sale:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-transparency' value='255' />
+                <format attr='mark-markers-mode' value='auto' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:flip_horizon:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:cash_sale:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-transparency' value='255' />
+                <format attr='mark-markers-mode' value='auto' />
+              </style-rule>
+            </style>
           </pane>
         </panes>
-        <rows>([federated.0dpax2p0rn4zi011mbz1x129v3of].[none:address:nk] / [federated.0dpax2p0rn4zi011mbz1x129v3of].[none:proptype:nk])</rows>
-        <cols />
+        <rows>([federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:buy_side_flip:qk] + [federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:flip_horizon:qk])</rows>
+        <cols>[federated.0dpax2p0rn4zi011mbz1x129v3of].[yr:date:ok]</cols>
       </table>
-      <simple-id uuid='{6CB35251-D71F-4778-88D1-F470847CC4CE}' />
+      <simple-id uuid='{68DE719B-49DE-4354-B76F-4CD149895E51}' />
     </worksheet>
   </worksheets>
   <dashboards>
@@ -2133,9 +2246,34 @@
       </devicelayouts>
       <simple-id uuid='{46C7000A-6F0B-4BEC-B4BF-47FD12AEB2D4}' />
     </dashboard>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 2'>
+      <style />
+      <size maxheight='860' maxwidth='650' minheight='560' minwidth='420' />
+      <zones>
+        <zone h='61631' id='3' name='Sheet 7' w='96769' x='2462' y='1559' />
+        <zone h='10552' id='4' name='Sheet 7' pane-specification-id='1' param='[federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:cash_sale:qk]' type-v2='color' w='21538' x='76615' y='1559' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='1' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{A8B816DA-85CB-44C8-BEF5-081A198CAEB9}' />
+    </dashboard>
   </dashboards>
-  <windows saved-dpi-scale-factor='1.25' source-height='37'>
-    <window class='worksheet' name='Sheet 5'>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 5'>
       <cards>
         <edge name='left'>
           <strip size='200'>
@@ -2198,10 +2336,10 @@
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='6' />
+      <active id='-1' />
       <simple-id uuid='{649EB0FA-D60E-4408-B729-301F884C6888}' />
     </window>
-    <window class='worksheet' maximized='true' name='Sheet 7'>
+    <window class='worksheet' name='Sheet 7'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -2221,8 +2359,22 @@
             <card type='title' />
           </strip>
         </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:cash_sale:qk]' type='color' />
+          </strip>
+        </edge>
       </cards>
-      <simple-id uuid='{29201DE0-3B69-46C1-9B7D-99243B2DE7D1}' />
+      <simple-id uuid='{39DD81CE-7A57-42BF-AA61-6357D235D75A}' />
+    </window>
+    <window class='dashboard' name='Dashboard 2'>
+      <viewpoints>
+        <viewpoint name='Sheet 7'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{364A5550-185A-4639-A15C-2A996F1AB246}' />
     </window>
   </windows>
 </workbook>
