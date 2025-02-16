@@ -1,0 +1,2718 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.24.1010.1014                               -->
+<workbook original-version='18.1' source-build='2024.3.0 (20243.24.1010.1014)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='A2_EDA_Residential' inline='true' name='federated.0dpax2p0rn4zi011mbz1x129v3of' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='A2_EDA_Residential' name='textscan.0kyk9jd0c1p9721b0g8oi19k3msn'>
+            <connection class='textscan' directory='F:/acads/MIT/Spring 25/Interactive Data Visualisation/Assignments/2/A2 (EDA) Datasets-20250215T233930Z-001/A2 (EDA) Datasets/Residential sales data in the City of Boston, 2000-2023' filename='A2_EDA_Residential.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0kyk9jd0c1p9721b0g8oi19k3msn' name='A2_EDA_Residential.csv' table='[A2_EDA_Residential#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='string' name='address' ordinal='0' />
+            <column datatype='string' name='street' ordinal='1' />
+            <column datatype='string' name='proptype' ordinal='2' />
+            <column datatype='date' name='date' ordinal='3' />
+            <column datatype='real' name='price' ordinal='4' />
+            <column datatype='date' name='prsldate' ordinal='5' />
+            <column datatype='real' name='prslpr' ordinal='6' />
+            <column datatype='real' name='mortgage' ordinal='7' />
+            <column datatype='integer' name='usecode' ordinal='8' />
+            <column datatype='string' name='usage' ordinal='9' />
+            <column datatype='string' name='style' ordinal='10' />
+            <column datatype='integer' name='yearbuilt' ordinal='11' />
+            <column datatype='integer' name='totrooms' ordinal='12' />
+            <column datatype='integer' name='bathrooms' ordinal='13' />
+            <column datatype='integer' name='bedrooms' ordinal='14' />
+            <column datatype='integer' name='lotsize' ordinal='15' />
+            <column datatype='integer' name='intersf' ordinal='16' />
+            <column datatype='string' name='lasqbin' ordinal='17' />
+            <column datatype='string' name='amenity' ordinal='18' />
+            <column datatype='integer' name='zip' ordinal='19' />
+            <column datatype='real' name='lat' ordinal='20' />
+            <column datatype='real' name='lon' ordinal='21' />
+            <column datatype='integer' name='year' ordinal='22' />
+            <column datatype='integer' name='cash_sale' ordinal='23' />
+            <column datatype='integer' name='buyer_llc_ind' ordinal='24' />
+            <column datatype='integer' name='buyer_bus_ind' ordinal='25' />
+            <column datatype='integer' name='buyer_trst_ind' ordinal='26' />
+            <column datatype='integer' name='buyer_bnk_ind' ordinal='27' />
+            <column datatype='integer' name='buyer_gse_ind' ordinal='28' />
+            <column datatype='integer' name='buyer_gov_ind' ordinal='29' />
+            <column datatype='integer' name='seller_llc_ind' ordinal='30' />
+            <column datatype='integer' name='seller_llp_ind' ordinal='31' />
+            <column datatype='integer' name='seller_bus_ind' ordinal='32' />
+            <column datatype='integer' name='seller_trst_ind' ordinal='33' />
+            <column datatype='integer' name='seller_bnk_ind' ordinal='34' />
+            <column datatype='integer' name='seller_gse_ind' ordinal='35' />
+            <column datatype='integer' name='seller_gov_ind' ordinal='36' />
+            <column datatype='integer' name='flip_horizon' ordinal='37' />
+            <column datatype='integer' name='flip_ind' ordinal='38' />
+            <column datatype='integer' name='buy_side_flip' ordinal='39' />
+            <column datatype='integer' name='sell_side_flip' ordinal='40' />
+            <column datatype='real' name='price_diff' ordinal='41' />
+            <column datatype='real' name='price_diff_pch' ordinal='42' />
+            <column datatype='string' name='month_horizon' ordinal='43' />
+            <column datatype='string' name='flip_term' ordinal='44' />
+            <column datatype='date' name='buy_horizon' ordinal='45' />
+            <column datatype='string' name='investor_type_purchase_count' ordinal='46' />
+            <column datatype='string' name='investor_type_sale_count' ordinal='47' />
+            <column datatype='string' name='investor_type_purchase_llc' ordinal='48' />
+            <column datatype='string' name='investor_type_sale_llc' ordinal='49' />
+            <column datatype='string' name='investor_type_purchase_building' ordinal='50' />
+            <column datatype='string' name='investor_type_sale_building' ordinal='51' />
+            <column datatype='real' name='avg_annual_value' ordinal='52' />
+            <column datatype='string' name='investor_type_purchase_value' ordinal='53' />
+            <column datatype='string' name='investor_type_sale_value' ordinal='54' />
+            <column datatype='integer' name='current_owner' ordinal='55' />
+            <column datatype='integer' name='restype_R1F' ordinal='56' />
+            <column datatype='integer' name='tot_owned' ordinal='57' />
+            <column datatype='integer' name='buyer_purchases' ordinal='58' />
+            <column datatype='integer' name='R1F_total' ordinal='59' />
+            <column datatype='string' name='investor_type_purchase' ordinal='60' />
+            <column datatype='string' name='investor_type_sale' ordinal='61' />
+            <column datatype='integer' name='inv_to_inv' ordinal='62' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>address</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[address]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>address</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>street</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[street]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>street</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>proptype</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[proptype]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>proptype</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>price</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[price]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>price</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>prsldate</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[prsldate]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>prsldate</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>prslpr</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[prslpr]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>prslpr</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mortgage</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[mortgage]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>mortgage</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>usecode</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[usecode]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>usecode</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>usage</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[usage]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>usage</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>style</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[style]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>style</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>yearbuilt</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[yearbuilt]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>yearbuilt</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>totrooms</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[totrooms]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>totrooms</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bathrooms</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[bathrooms]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>bathrooms</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bedrooms</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[bedrooms]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>bedrooms</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lotsize</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[lotsize]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>lotsize</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>intersf</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[intersf]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>intersf</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lasqbin</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[lasqbin]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>lasqbin</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>amenity</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[amenity]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>amenity</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>zip</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[zip]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>zip</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lat</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[lat]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>lat</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lon</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[lon]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>lon</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[year]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>year</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cash_sale</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[cash_sale]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>cash_sale</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>buyer_llc_ind</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[buyer_llc_ind]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>buyer_llc_ind</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>buyer_bus_ind</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[buyer_bus_ind]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>buyer_bus_ind</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>buyer_trst_ind</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[buyer_trst_ind]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>buyer_trst_ind</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>buyer_bnk_ind</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[buyer_bnk_ind]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>buyer_bnk_ind</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>buyer_gse_ind</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[buyer_gse_ind]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>buyer_gse_ind</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>buyer_gov_ind</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[buyer_gov_ind]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>buyer_gov_ind</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>seller_llc_ind</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[seller_llc_ind]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>seller_llc_ind</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>seller_llp_ind</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[seller_llp_ind]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>seller_llp_ind</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>seller_bus_ind</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[seller_bus_ind]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>seller_bus_ind</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>seller_trst_ind</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[seller_trst_ind]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>seller_trst_ind</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>seller_bnk_ind</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[seller_bnk_ind]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>seller_bnk_ind</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>seller_gse_ind</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[seller_gse_ind]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>seller_gse_ind</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>seller_gov_ind</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[seller_gov_ind]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>seller_gov_ind</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>flip_horizon</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[flip_horizon]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>flip_horizon</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>flip_ind</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[flip_ind]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>flip_ind</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>buy_side_flip</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[buy_side_flip]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>buy_side_flip</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sell_side_flip</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[sell_side_flip]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>sell_side_flip</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>price_diff</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[price_diff]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>price_diff</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>price_diff_pch</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[price_diff_pch]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>price_diff_pch</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month_horizon</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[month_horizon]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>month_horizon</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>flip_term</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[flip_term]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>flip_term</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>buy_horizon</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[buy_horizon]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>buy_horizon</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>investor_type_purchase_count</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[investor_type_purchase_count]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>investor_type_purchase_count</remote-alias>
+            <ordinal>46</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>investor_type_sale_count</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[investor_type_sale_count]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>investor_type_sale_count</remote-alias>
+            <ordinal>47</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>investor_type_purchase_llc</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[investor_type_purchase_llc]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>investor_type_purchase_llc</remote-alias>
+            <ordinal>48</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>investor_type_sale_llc</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[investor_type_sale_llc]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>investor_type_sale_llc</remote-alias>
+            <ordinal>49</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>investor_type_purchase_building</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[investor_type_purchase_building]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>investor_type_purchase_building</remote-alias>
+            <ordinal>50</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>investor_type_sale_building</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[investor_type_sale_building]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>investor_type_sale_building</remote-alias>
+            <ordinal>51</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_annual_value</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_annual_value]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>avg_annual_value</remote-alias>
+            <ordinal>52</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>investor_type_purchase_value</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[investor_type_purchase_value]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>investor_type_purchase_value</remote-alias>
+            <ordinal>53</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>investor_type_sale_value</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[investor_type_sale_value]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>investor_type_sale_value</remote-alias>
+            <ordinal>54</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>current_owner</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[current_owner]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>current_owner</remote-alias>
+            <ordinal>55</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>restype_R1F</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[restype_R1F]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>restype_R1F</remote-alias>
+            <ordinal>56</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tot_owned</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[tot_owned]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>tot_owned</remote-alias>
+            <ordinal>57</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>buyer_purchases</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[buyer_purchases]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>buyer_purchases</remote-alias>
+            <ordinal>58</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>R1F_total</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[R1F_total]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>R1F_total</remote-alias>
+            <ordinal>59</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>investor_type_purchase</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[investor_type_purchase]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>investor_type_purchase</remote-alias>
+            <ordinal>60</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>investor_type_sale</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[investor_type_sale]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>investor_type_sale</remote-alias>
+            <ordinal>61</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>inv_to_inv</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[inv_to_inv]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>inv_to_inv</remote-alias>
+            <ordinal>62</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Field Names' datatype='real' name='[Calculation_739434811425374208]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[price]' />
+      </column>
+      <column caption='Null Count' datatype='integer' name='[Calculation_739434811425751041]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF ISNULL([price]) THEN 1 ELSE 0 END)' />
+      </column>
+      <column caption='% Missing' datatype='real' name='[Calculation_739434811426025474]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF ISNULL([price]) THEN 1 ELSE 0 END) / COUNT([price])' />
+      </column>
+      <column caption='R1F total' datatype='integer' name='[R1F_total]' role='measure' type='quantitative' />
+      <column caption='A2_EDA_Residential.csv' datatype='table' name='[__tableau_internal_object_id__].[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]' role='measure' type='quantitative' />
+      <column caption='Address' datatype='string' name='[address]' role='dimension' type='nominal' />
+      <column caption='Amenity' datatype='string' name='[amenity]' role='dimension' type='nominal' />
+      <column caption='Avg Annual Value' datatype='real' name='[avg_annual_value]' role='measure' type='quantitative' />
+      <column caption='Bathrooms' datatype='integer' name='[bathrooms]' role='measure' type='quantitative' />
+      <column caption='Bedrooms' datatype='integer' name='[bedrooms]' role='measure' type='quantitative' />
+      <column caption='Buy Horizon' datatype='date' name='[buy_horizon]' role='dimension' type='ordinal' />
+      <column caption='Buy Side Flip' datatype='integer' name='[buy_side_flip]' role='measure' type='quantitative' />
+      <column caption='Buyer Bnk Ind' datatype='integer' name='[buyer_bnk_ind]' role='measure' type='quantitative' />
+      <column caption='Buyer Bus Ind' datatype='integer' name='[buyer_bus_ind]' role='measure' type='quantitative' />
+      <column caption='Buyer Gov Ind' datatype='integer' name='[buyer_gov_ind]' role='measure' type='quantitative' />
+      <column caption='Buyer Gse Ind' datatype='integer' name='[buyer_gse_ind]' role='measure' type='quantitative' />
+      <column caption='Buyer Llc Ind' datatype='integer' name='[buyer_llc_ind]' role='measure' type='quantitative' />
+      <column caption='Buyer Purchases' datatype='integer' name='[buyer_purchases]' role='measure' type='quantitative' />
+      <column caption='Buyer Trst Ind' datatype='integer' name='[buyer_trst_ind]' role='measure' type='quantitative' />
+      <column caption='Cash Sale' datatype='integer' name='[cash_sale]' role='measure' type='quantitative' />
+      <column caption='Current Owner' datatype='integer' name='[current_owner]' role='measure' type='quantitative' />
+      <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+      <column caption='Flip Horizon' datatype='integer' name='[flip_horizon]' role='measure' type='quantitative' />
+      <column caption='Flip Ind' datatype='integer' name='[flip_ind]' role='measure' type='quantitative' />
+      <column caption='Flip Term' datatype='string' name='[flip_term]' role='dimension' type='nominal' />
+      <column caption='Intersf' datatype='integer' name='[intersf]' role='measure' type='quantitative' />
+      <column caption='Inv To Inv' datatype='integer' name='[inv_to_inv]' role='measure' type='quantitative' />
+      <column caption='Investor Type Purchase' datatype='string' name='[investor_type_purchase]' role='dimension' type='nominal' />
+      <column caption='Investor Type Purchase Building' datatype='string' name='[investor_type_purchase_building]' role='dimension' type='nominal' />
+      <column caption='Investor Type Purchase Count' datatype='string' name='[investor_type_purchase_count]' role='dimension' type='nominal' />
+      <column caption='Investor Type Purchase Llc' datatype='string' name='[investor_type_purchase_llc]' role='dimension' type='nominal' />
+      <column caption='Investor Type Purchase Value' datatype='string' name='[investor_type_purchase_value]' role='dimension' type='nominal' />
+      <column caption='Investor Type Sale' datatype='string' name='[investor_type_sale]' role='dimension' type='nominal' />
+      <column caption='Investor Type Sale Building' datatype='string' name='[investor_type_sale_building]' role='dimension' type='nominal' />
+      <column caption='Investor Type Sale Count' datatype='string' name='[investor_type_sale_count]' role='dimension' type='nominal' />
+      <column caption='Investor Type Sale Llc' datatype='string' name='[investor_type_sale_llc]' role='dimension' type='nominal' />
+      <column caption='Investor Type Sale Value' datatype='string' name='[investor_type_sale_value]' role='dimension' type='nominal' />
+      <column caption='Lasqbin' datatype='string' name='[lasqbin]' role='dimension' type='nominal' />
+      <column aggregation='Avg' caption='Lat' datatype='real' name='[lat]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' caption='Lon' datatype='real' name='[lon]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='Lotsize' datatype='integer' name='[lotsize]' role='measure' type='quantitative' />
+      <column caption='Month Horizon' datatype='string' name='[month_horizon]' role='dimension' type='nominal' />
+      <column caption='Mortgage' datatype='real' name='[mortgage]' role='measure' type='quantitative' />
+      <column caption='Price' datatype='real' name='[price]' role='measure' type='quantitative' />
+      <column caption='Price Diff' datatype='real' name='[price_diff]' role='measure' type='quantitative' />
+      <column caption='Price Diff Pch' datatype='real' name='[price_diff_pch]' role='measure' type='quantitative' />
+      <column caption='Proptype' datatype='string' name='[proptype]' role='dimension' type='nominal' />
+      <column caption='Prsldate' datatype='date' name='[prsldate]' role='dimension' type='ordinal' />
+      <column caption='Prslpr' datatype='real' name='[prslpr]' role='measure' type='quantitative' />
+      <column caption='restype R1F' datatype='integer' name='[restype_R1F]' role='measure' type='quantitative' />
+      <column caption='Sell Side Flip' datatype='integer' name='[sell_side_flip]' role='measure' type='quantitative' />
+      <column caption='Seller Bnk Ind' datatype='integer' name='[seller_bnk_ind]' role='measure' type='quantitative' />
+      <column caption='Seller Bus Ind' datatype='integer' name='[seller_bus_ind]' role='measure' type='quantitative' />
+      <column caption='Seller Gov Ind' datatype='integer' name='[seller_gov_ind]' role='measure' type='quantitative' />
+      <column caption='Seller Gse Ind' datatype='integer' name='[seller_gse_ind]' role='measure' type='quantitative' />
+      <column caption='Seller Llc Ind' datatype='integer' name='[seller_llc_ind]' role='measure' type='quantitative' />
+      <column caption='Seller Llp Ind' datatype='integer' name='[seller_llp_ind]' role='measure' type='quantitative' />
+      <column caption='Seller Trst Ind' datatype='integer' name='[seller_trst_ind]' role='measure' type='quantitative' />
+      <column caption='Street' datatype='string' name='[street]' role='dimension' type='nominal' />
+      <column caption='Style' datatype='string' name='[style]' role='dimension' type='nominal' />
+      <column caption='Tot Owned' datatype='integer' name='[tot_owned]' role='measure' type='quantitative' />
+      <column caption='Totrooms' datatype='integer' name='[totrooms]' role='measure' type='quantitative' />
+      <column caption='Usage' datatype='string' name='[usage]' role='dimension' type='nominal' />
+      <column caption='Usecode' datatype='integer' name='[usecode]' role='measure' type='quantitative' />
+      <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+      <column caption='Yearbuilt' datatype='integer' name='[yearbuilt]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Zip' datatype='integer' default-format='*00000' name='[zip]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/AMITRA~1/AppData/Local/Temp/TableauTemp/#TableauTemp_1al51t810dl4171fzw1et0bb1xby.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='02/16/2025 03:32:53 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>address</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[address]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>address</remote-alias>
+              <ordinal>0</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>22372</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>street</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[street]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>street</remote-alias>
+              <ordinal>1</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>458</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>proptype</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[proptype]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>proptype</remote-alias>
+              <ordinal>2</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>20</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>date</remote-alias>
+              <ordinal>3</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>8991</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>price</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[price]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>price</remote-alias>
+              <ordinal>4</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3775</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>prsldate</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[prsldate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>prsldate</remote-alias>
+              <ordinal>5</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>7695</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>prslpr</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[prslpr]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>prslpr</remote-alias>
+              <ordinal>6</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3370</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>mortgage</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[mortgage]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>mortgage</remote-alias>
+              <ordinal>7</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3697</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>usecode</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[usecode]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>usecode</remote-alias>
+              <ordinal>8</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>44</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>usage</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[usage]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>usage</remote-alias>
+              <ordinal>9</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>44</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>style</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[style]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>style</remote-alias>
+              <ordinal>10</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>19</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>yearbuilt</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[yearbuilt]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>yearbuilt</remote-alias>
+              <ordinal>11</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>250</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>totrooms</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[totrooms]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>totrooms</remote-alias>
+              <ordinal>12</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>20</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>bathrooms</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[bathrooms]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>bathrooms</remote-alias>
+              <ordinal>13</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>bedrooms</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[bedrooms]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>bedrooms</remote-alias>
+              <ordinal>14</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>13</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>lotsize</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[lotsize]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>lotsize</remote-alias>
+              <ordinal>15</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4029</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>intersf</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[intersf]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>intersf</remote-alias>
+              <ordinal>16</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4382</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>lasqbin</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[lasqbin]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>lasqbin</remote-alias>
+              <ordinal>17</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>170</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>amenity</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[amenity]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>amenity</remote-alias>
+              <ordinal>18</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>93</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>zip</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[zip]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>zip</remote-alias>
+              <ordinal>19</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>37</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>lat</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[lat]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>lat</remote-alias>
+              <ordinal>20</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4791</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>lon</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[lon]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>lon</remote-alias>
+              <ordinal>21</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4904</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>year</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>year</remote-alias>
+              <ordinal>22</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>23</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cash_sale</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[cash_sale]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cash_sale</remote-alias>
+              <ordinal>23</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>buyer_llc_ind</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[buyer_llc_ind]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>buyer_llc_ind</remote-alias>
+              <ordinal>24</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>buyer_bus_ind</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[buyer_bus_ind]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>buyer_bus_ind</remote-alias>
+              <ordinal>25</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>buyer_trst_ind</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[buyer_trst_ind]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>buyer_trst_ind</remote-alias>
+              <ordinal>26</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>buyer_bnk_ind</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[buyer_bnk_ind]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>buyer_bnk_ind</remote-alias>
+              <ordinal>27</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>buyer_gse_ind</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[buyer_gse_ind]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>buyer_gse_ind</remote-alias>
+              <ordinal>28</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>buyer_gov_ind</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[buyer_gov_ind]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>buyer_gov_ind</remote-alias>
+              <ordinal>29</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>seller_llc_ind</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[seller_llc_ind]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>seller_llc_ind</remote-alias>
+              <ordinal>30</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>seller_llp_ind</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[seller_llp_ind]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>seller_llp_ind</remote-alias>
+              <ordinal>31</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>seller_bus_ind</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[seller_bus_ind]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>seller_bus_ind</remote-alias>
+              <ordinal>32</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>seller_trst_ind</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[seller_trst_ind]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>seller_trst_ind</remote-alias>
+              <ordinal>33</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>seller_bnk_ind</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[seller_bnk_ind]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>seller_bnk_ind</remote-alias>
+              <ordinal>34</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>seller_gse_ind</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[seller_gse_ind]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>seller_gse_ind</remote-alias>
+              <ordinal>35</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>seller_gov_ind</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[seller_gov_ind]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>seller_gov_ind</remote-alias>
+              <ordinal>36</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>flip_horizon</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[flip_horizon]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>flip_horizon</remote-alias>
+              <ordinal>37</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8644</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>flip_ind</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[flip_ind]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>flip_ind</remote-alias>
+              <ordinal>38</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>buy_side_flip</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[buy_side_flip]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>buy_side_flip</remote-alias>
+              <ordinal>39</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>sell_side_flip</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[sell_side_flip]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>sell_side_flip</remote-alias>
+              <ordinal>40</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>price_diff</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[price_diff]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>price_diff</remote-alias>
+              <ordinal>41</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2996</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>price_diff_pch</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[price_diff_pch]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>price_diff_pch</remote-alias>
+              <ordinal>42</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7353</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>month_horizon</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[month_horizon]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>month_horizon</remote-alias>
+              <ordinal>43</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>55</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>flip_term</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[flip_term]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>flip_term</remote-alias>
+              <ordinal>44</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>buy_horizon</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[buy_horizon]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>buy_horizon</remote-alias>
+              <ordinal>45</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>8991</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>investor_type_purchase_count</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[investor_type_purchase_count]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>investor_type_purchase_count</remote-alias>
+              <ordinal>46</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>investor_type_sale_count</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[investor_type_sale_count]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>investor_type_sale_count</remote-alias>
+              <ordinal>47</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>investor_type_purchase_llc</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[investor_type_purchase_llc]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>investor_type_purchase_llc</remote-alias>
+              <ordinal>48</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>investor_type_sale_llc</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[investor_type_sale_llc]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>investor_type_sale_llc</remote-alias>
+              <ordinal>49</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>investor_type_purchase_building</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[investor_type_purchase_building]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>investor_type_purchase_building</remote-alias>
+              <ordinal>50</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>investor_type_sale_building</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[investor_type_sale_building]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>investor_type_sale_building</remote-alias>
+              <ordinal>51</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>avg_annual_value</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_annual_value]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_annual_value</remote-alias>
+              <ordinal>52</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6188</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>investor_type_purchase_value</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[investor_type_purchase_value]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>investor_type_purchase_value</remote-alias>
+              <ordinal>53</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>investor_type_sale_value</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[investor_type_sale_value]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>investor_type_sale_value</remote-alias>
+              <ordinal>54</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>current_owner</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[current_owner]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>current_owner</remote-alias>
+              <ordinal>55</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>restype_R1F</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[restype_R1F]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>restype_R1F</remote-alias>
+              <ordinal>56</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>tot_owned</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[tot_owned]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>tot_owned</remote-alias>
+              <ordinal>57</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>55</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>buyer_purchases</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[buyer_purchases]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>buyer_purchases</remote-alias>
+              <ordinal>58</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>87</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>R1F_total</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[R1F_total]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>R1F_total</remote-alias>
+              <ordinal>59</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>20</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>investor_type_purchase</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[investor_type_purchase]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>investor_type_purchase</remote-alias>
+              <ordinal>60</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>investor_type_sale</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[investor_type_sale]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>investor_type_sale</remote-alias>
+              <ordinal>61</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>inv_to_inv</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[inv_to_inv]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>inv_to_inv</remote-alias>
+              <ordinal>62</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='A2_EDA_Residential.csv' id='A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460'>
+            <properties context=''>
+              <relation connection='textscan.0kyk9jd0c1p9721b0g8oi19k3msn' name='A2_EDA_Residential.csv' table='[A2_EDA_Residential#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='string' name='address' ordinal='0' />
+                  <column datatype='string' name='street' ordinal='1' />
+                  <column datatype='string' name='proptype' ordinal='2' />
+                  <column datatype='date' name='date' ordinal='3' />
+                  <column datatype='real' name='price' ordinal='4' />
+                  <column datatype='date' name='prsldate' ordinal='5' />
+                  <column datatype='real' name='prslpr' ordinal='6' />
+                  <column datatype='real' name='mortgage' ordinal='7' />
+                  <column datatype='integer' name='usecode' ordinal='8' />
+                  <column datatype='string' name='usage' ordinal='9' />
+                  <column datatype='string' name='style' ordinal='10' />
+                  <column datatype='integer' name='yearbuilt' ordinal='11' />
+                  <column datatype='integer' name='totrooms' ordinal='12' />
+                  <column datatype='integer' name='bathrooms' ordinal='13' />
+                  <column datatype='integer' name='bedrooms' ordinal='14' />
+                  <column datatype='integer' name='lotsize' ordinal='15' />
+                  <column datatype='integer' name='intersf' ordinal='16' />
+                  <column datatype='string' name='lasqbin' ordinal='17' />
+                  <column datatype='string' name='amenity' ordinal='18' />
+                  <column datatype='integer' name='zip' ordinal='19' />
+                  <column datatype='real' name='lat' ordinal='20' />
+                  <column datatype='real' name='lon' ordinal='21' />
+                  <column datatype='integer' name='year' ordinal='22' />
+                  <column datatype='integer' name='cash_sale' ordinal='23' />
+                  <column datatype='integer' name='buyer_llc_ind' ordinal='24' />
+                  <column datatype='integer' name='buyer_bus_ind' ordinal='25' />
+                  <column datatype='integer' name='buyer_trst_ind' ordinal='26' />
+                  <column datatype='integer' name='buyer_bnk_ind' ordinal='27' />
+                  <column datatype='integer' name='buyer_gse_ind' ordinal='28' />
+                  <column datatype='integer' name='buyer_gov_ind' ordinal='29' />
+                  <column datatype='integer' name='seller_llc_ind' ordinal='30' />
+                  <column datatype='integer' name='seller_llp_ind' ordinal='31' />
+                  <column datatype='integer' name='seller_bus_ind' ordinal='32' />
+                  <column datatype='integer' name='seller_trst_ind' ordinal='33' />
+                  <column datatype='integer' name='seller_bnk_ind' ordinal='34' />
+                  <column datatype='integer' name='seller_gse_ind' ordinal='35' />
+                  <column datatype='integer' name='seller_gov_ind' ordinal='36' />
+                  <column datatype='integer' name='flip_horizon' ordinal='37' />
+                  <column datatype='integer' name='flip_ind' ordinal='38' />
+                  <column datatype='integer' name='buy_side_flip' ordinal='39' />
+                  <column datatype='integer' name='sell_side_flip' ordinal='40' />
+                  <column datatype='real' name='price_diff' ordinal='41' />
+                  <column datatype='real' name='price_diff_pch' ordinal='42' />
+                  <column datatype='string' name='month_horizon' ordinal='43' />
+                  <column datatype='string' name='flip_term' ordinal='44' />
+                  <column datatype='date' name='buy_horizon' ordinal='45' />
+                  <column datatype='string' name='investor_type_purchase_count' ordinal='46' />
+                  <column datatype='string' name='investor_type_sale_count' ordinal='47' />
+                  <column datatype='string' name='investor_type_purchase_llc' ordinal='48' />
+                  <column datatype='string' name='investor_type_sale_llc' ordinal='49' />
+                  <column datatype='string' name='investor_type_purchase_building' ordinal='50' />
+                  <column datatype='string' name='investor_type_sale_building' ordinal='51' />
+                  <column datatype='real' name='avg_annual_value' ordinal='52' />
+                  <column datatype='string' name='investor_type_purchase_value' ordinal='53' />
+                  <column datatype='string' name='investor_type_sale_value' ordinal='54' />
+                  <column datatype='integer' name='current_owner' ordinal='55' />
+                  <column datatype='integer' name='restype_R1F' ordinal='56' />
+                  <column datatype='integer' name='tot_owned' ordinal='57' />
+                  <column datatype='integer' name='buyer_purchases' ordinal='58' />
+                  <column datatype='integer' name='R1F_total' ordinal='59' />
+                  <column datatype='string' name='investor_type_purchase' ordinal='60' />
+                  <column datatype='string' name='investor_type_sale' ordinal='61' />
+                  <column datatype='integer' name='inv_to_inv' ordinal='62' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='A2_EDA_Residential' name='federated.0dpax2p0rn4zi011mbz1x129v3of' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0dpax2p0rn4zi011mbz1x129v3of'>
+            <column caption='Flip Horizon' datatype='integer' name='[flip_horizon]' role='measure' type='quantitative' />
+            <column caption='Flip Term' datatype='string' name='[flip_term]' role='dimension' type='nominal' />
+            <column-instance column='[flip_term]' derivation='None' name='[none:flip_term:nk]' pivot='key' type='nominal' />
+            <column-instance column='[flip_horizon]' derivation='Sum' name='[sum:flip_horizon:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:flip_term:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:flip_term:nk]' />
+              <groupfilter function='member' level='[none:flip_term:nk]' member='&quot;Non-flip&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:flip_term:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:flip_horizon:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+          </pane>
+        </panes>
+        <rows>[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:flip_term:nk]</rows>
+        <cols>[federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:flip_horizon:qk]</cols>
+      </table>
+      <simple-id uuid='{13C37B4D-0E0C-457A-B1B0-66ED75CF637D}' />
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='A2_EDA_Residential' name='federated.0dpax2p0rn4zi011mbz1x129v3of' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0dpax2p0rn4zi011mbz1x129v3of'>
+            <column caption='Cash Sale' datatype='integer' name='[cash_sale]' role='measure' type='quantitative' />
+            <column caption='Investor Type Purchase' datatype='string' name='[investor_type_purchase]' role='dimension' type='nominal' />
+            <column-instance column='[investor_type_purchase]' derivation='None' name='[none:investor_type_purchase:nk]' pivot='key' type='nominal' />
+            <column-instance column='[cash_sale]' derivation='Sum' name='[sum:cash_sale:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <size column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:cash_sale:qk]' />
+              <text column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:investor_type_purchase:nk]' />
+              <color column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:investor_type_purchase:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{28673F10-1830-4BE1-AD28-F20C6204F2BA}' />
+    </worksheet>
+    <worksheet name='Sheet 4'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='A2_EDA_Residential' name='federated.0dpax2p0rn4zi011mbz1x129v3of' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0dpax2p0rn4zi011mbz1x129v3of'>
+            <column caption='Cash Sale' datatype='integer' name='[cash_sale]' role='measure' type='quantitative' />
+            <column caption='Current Owner' datatype='integer' name='[current_owner]' role='measure' type='quantitative' />
+            <column-instance column='[proptype]' derivation='None' name='[none:proptype:nk]' pivot='key' type='nominal' />
+            <column caption='Proptype' datatype='string' name='[proptype]' role='dimension' type='nominal' />
+            <column-instance column='[cash_sale]' derivation='Sum' name='[sum:cash_sale:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[current_owner]' derivation='Sum' name='[sum:current_owner:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:cash_sale:qk]</rows>
+        <cols>([federated.0dpax2p0rn4zi011mbz1x129v3of].[none:proptype:nk] * [federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:current_owner:qk])</cols>
+      </table>
+      <simple-id uuid='{7D169F0B-C532-4B07-89FA-EFDBFD630DDD}' />
+    </worksheet>
+    <worksheet name='Sheet 5'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{94B77CC2-037C-47FA-B905-45B215CA14B2}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{99EA8EB2-1BDC-4A42-BE2C-7E7558D85C4E}' />
+    </window>
+    <window class='worksheet' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:investor_type_purchase:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{511B0E20-F537-4384-AF8E-C8BBF54DDDDD}' />
+    </window>
+    <window class='worksheet' name='Sheet 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{328AAB7E-CBFE-4BAE-AA60-A9C6211A77A9}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{9EBD1ECD-5003-4FC9-B384-FFEA6FEE90DA}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='147' name='Sheet 2' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 3' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 4' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 5' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAACFUlEQVR4nO3TMQEAIAzAMMC/5yFjRxMFfXpnZg5Eve0A2GQA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQD
+      kGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBp
+      BiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA
+      0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDN
+      AKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxA
+      mgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKR9Y+0F
+      fBUOM1sAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>

@@ -1,0 +1,2177 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.24.1010.1014                               -->
+<workbook original-version='18.1' source-build='2024.3.0 (20243.24.1010.1014)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='A2_EDA_Residential' inline='true' name='federated.0dpax2p0rn4zi011mbz1x129v3of' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='A2_EDA_Residential' name='textscan.0kyk9jd0c1p9721b0g8oi19k3msn'>
+            <connection class='textscan' directory='F:/acads/MIT/Spring 25/Interactive Data Visualisation/Assignments/2/A2 (EDA) Datasets-20250215T233930Z-001/A2 (EDA) Datasets/Residential sales data in the City of Boston, 2000-2023' filename='A2_EDA_Residential.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0kyk9jd0c1p9721b0g8oi19k3msn' name='A2_EDA_Residential.csv' table='[A2_EDA_Residential#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='string' name='address' ordinal='0' />
+            <column datatype='string' name='street' ordinal='1' />
+            <column datatype='string' name='proptype' ordinal='2' />
+            <column datatype='date' name='date' ordinal='3' />
+            <column datatype='real' name='price' ordinal='4' />
+            <column datatype='date' name='prsldate' ordinal='5' />
+            <column datatype='real' name='prslpr' ordinal='6' />
+            <column datatype='real' name='mortgage' ordinal='7' />
+            <column datatype='integer' name='usecode' ordinal='8' />
+            <column datatype='string' name='usage' ordinal='9' />
+            <column datatype='string' name='style' ordinal='10' />
+            <column datatype='integer' name='yearbuilt' ordinal='11' />
+            <column datatype='integer' name='totrooms' ordinal='12' />
+            <column datatype='integer' name='bathrooms' ordinal='13' />
+            <column datatype='integer' name='bedrooms' ordinal='14' />
+            <column datatype='integer' name='lotsize' ordinal='15' />
+            <column datatype='integer' name='intersf' ordinal='16' />
+            <column datatype='string' name='lasqbin' ordinal='17' />
+            <column datatype='string' name='amenity' ordinal='18' />
+            <column datatype='integer' name='zip' ordinal='19' />
+            <column datatype='real' name='lat' ordinal='20' />
+            <column datatype='real' name='lon' ordinal='21' />
+            <column datatype='integer' name='year' ordinal='22' />
+            <column datatype='integer' name='cash_sale' ordinal='23' />
+            <column datatype='integer' name='buyer_llc_ind' ordinal='24' />
+            <column datatype='integer' name='buyer_bus_ind' ordinal='25' />
+            <column datatype='integer' name='buyer_trst_ind' ordinal='26' />
+            <column datatype='integer' name='buyer_bnk_ind' ordinal='27' />
+            <column datatype='integer' name='buyer_gse_ind' ordinal='28' />
+            <column datatype='integer' name='buyer_gov_ind' ordinal='29' />
+            <column datatype='integer' name='seller_llc_ind' ordinal='30' />
+            <column datatype='integer' name='seller_llp_ind' ordinal='31' />
+            <column datatype='integer' name='seller_bus_ind' ordinal='32' />
+            <column datatype='integer' name='seller_trst_ind' ordinal='33' />
+            <column datatype='integer' name='seller_bnk_ind' ordinal='34' />
+            <column datatype='integer' name='seller_gse_ind' ordinal='35' />
+            <column datatype='integer' name='seller_gov_ind' ordinal='36' />
+            <column datatype='integer' name='flip_horizon' ordinal='37' />
+            <column datatype='integer' name='flip_ind' ordinal='38' />
+            <column datatype='integer' name='buy_side_flip' ordinal='39' />
+            <column datatype='integer' name='sell_side_flip' ordinal='40' />
+            <column datatype='real' name='price_diff' ordinal='41' />
+            <column datatype='real' name='price_diff_pch' ordinal='42' />
+            <column datatype='string' name='month_horizon' ordinal='43' />
+            <column datatype='string' name='flip_term' ordinal='44' />
+            <column datatype='date' name='buy_horizon' ordinal='45' />
+            <column datatype='string' name='investor_type_purchase_count' ordinal='46' />
+            <column datatype='string' name='investor_type_sale_count' ordinal='47' />
+            <column datatype='string' name='investor_type_purchase_llc' ordinal='48' />
+            <column datatype='string' name='investor_type_sale_llc' ordinal='49' />
+            <column datatype='string' name='investor_type_purchase_building' ordinal='50' />
+            <column datatype='string' name='investor_type_sale_building' ordinal='51' />
+            <column datatype='real' name='avg_annual_value' ordinal='52' />
+            <column datatype='string' name='investor_type_purchase_value' ordinal='53' />
+            <column datatype='string' name='investor_type_sale_value' ordinal='54' />
+            <column datatype='integer' name='current_owner' ordinal='55' />
+            <column datatype='integer' name='restype_R1F' ordinal='56' />
+            <column datatype='integer' name='tot_owned' ordinal='57' />
+            <column datatype='integer' name='buyer_purchases' ordinal='58' />
+            <column datatype='integer' name='R1F_total' ordinal='59' />
+            <column datatype='string' name='investor_type_purchase' ordinal='60' />
+            <column datatype='string' name='investor_type_sale' ordinal='61' />
+            <column datatype='integer' name='inv_to_inv' ordinal='62' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>address</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[address]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>address</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>street</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[street]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>street</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>proptype</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[proptype]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>proptype</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>price</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[price]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>price</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>prsldate</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[prsldate]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>prsldate</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>prslpr</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[prslpr]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>prslpr</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mortgage</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[mortgage]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>mortgage</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>usecode</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[usecode]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>usecode</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>usage</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[usage]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>usage</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>style</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[style]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>style</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>yearbuilt</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[yearbuilt]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>yearbuilt</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>totrooms</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[totrooms]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>totrooms</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bathrooms</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[bathrooms]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>bathrooms</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bedrooms</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[bedrooms]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>bedrooms</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lotsize</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[lotsize]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>lotsize</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>intersf</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[intersf]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>intersf</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lasqbin</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[lasqbin]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>lasqbin</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>amenity</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[amenity]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>amenity</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>zip</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[zip]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>zip</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lat</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[lat]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>lat</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lon</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[lon]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>lon</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[year]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>year</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cash_sale</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[cash_sale]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>cash_sale</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>buyer_llc_ind</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[buyer_llc_ind]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>buyer_llc_ind</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>buyer_bus_ind</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[buyer_bus_ind]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>buyer_bus_ind</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>buyer_trst_ind</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[buyer_trst_ind]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>buyer_trst_ind</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>buyer_bnk_ind</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[buyer_bnk_ind]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>buyer_bnk_ind</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>buyer_gse_ind</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[buyer_gse_ind]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>buyer_gse_ind</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>buyer_gov_ind</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[buyer_gov_ind]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>buyer_gov_ind</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>seller_llc_ind</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[seller_llc_ind]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>seller_llc_ind</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>seller_llp_ind</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[seller_llp_ind]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>seller_llp_ind</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>seller_bus_ind</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[seller_bus_ind]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>seller_bus_ind</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>seller_trst_ind</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[seller_trst_ind]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>seller_trst_ind</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>seller_bnk_ind</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[seller_bnk_ind]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>seller_bnk_ind</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>seller_gse_ind</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[seller_gse_ind]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>seller_gse_ind</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>seller_gov_ind</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[seller_gov_ind]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>seller_gov_ind</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>flip_horizon</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[flip_horizon]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>flip_horizon</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>flip_ind</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[flip_ind]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>flip_ind</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>buy_side_flip</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[buy_side_flip]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>buy_side_flip</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sell_side_flip</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[sell_side_flip]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>sell_side_flip</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>price_diff</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[price_diff]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>price_diff</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>price_diff_pch</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[price_diff_pch]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>price_diff_pch</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month_horizon</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[month_horizon]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>month_horizon</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>flip_term</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[flip_term]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>flip_term</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>buy_horizon</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[buy_horizon]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>buy_horizon</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>investor_type_purchase_count</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[investor_type_purchase_count]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>investor_type_purchase_count</remote-alias>
+            <ordinal>46</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>investor_type_sale_count</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[investor_type_sale_count]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>investor_type_sale_count</remote-alias>
+            <ordinal>47</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>investor_type_purchase_llc</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[investor_type_purchase_llc]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>investor_type_purchase_llc</remote-alias>
+            <ordinal>48</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>investor_type_sale_llc</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[investor_type_sale_llc]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>investor_type_sale_llc</remote-alias>
+            <ordinal>49</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>investor_type_purchase_building</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[investor_type_purchase_building]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>investor_type_purchase_building</remote-alias>
+            <ordinal>50</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>investor_type_sale_building</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[investor_type_sale_building]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>investor_type_sale_building</remote-alias>
+            <ordinal>51</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_annual_value</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_annual_value]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>avg_annual_value</remote-alias>
+            <ordinal>52</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>investor_type_purchase_value</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[investor_type_purchase_value]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>investor_type_purchase_value</remote-alias>
+            <ordinal>53</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>investor_type_sale_value</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[investor_type_sale_value]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>investor_type_sale_value</remote-alias>
+            <ordinal>54</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>current_owner</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[current_owner]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>current_owner</remote-alias>
+            <ordinal>55</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>restype_R1F</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[restype_R1F]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>restype_R1F</remote-alias>
+            <ordinal>56</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tot_owned</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[tot_owned]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>tot_owned</remote-alias>
+            <ordinal>57</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>buyer_purchases</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[buyer_purchases]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>buyer_purchases</remote-alias>
+            <ordinal>58</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>R1F_total</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[R1F_total]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>R1F_total</remote-alias>
+            <ordinal>59</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>investor_type_purchase</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[investor_type_purchase]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>investor_type_purchase</remote-alias>
+            <ordinal>60</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>investor_type_sale</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[investor_type_sale]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>investor_type_sale</remote-alias>
+            <ordinal>61</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>inv_to_inv</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[inv_to_inv]</local-name>
+            <parent-name>[A2_EDA_Residential.csv]</parent-name>
+            <remote-alias>inv_to_inv</remote-alias>
+            <ordinal>62</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='R1F total' datatype='integer' name='[R1F_total]' role='measure' type='quantitative' />
+      <column caption='A2_EDA_Residential.csv' datatype='table' name='[__tableau_internal_object_id__].[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]' role='measure' type='quantitative' />
+      <column caption='Address' datatype='string' name='[address]' role='dimension' type='nominal' />
+      <column caption='Amenity' datatype='string' name='[amenity]' role='dimension' type='nominal' />
+      <column caption='Avg Annual Value' datatype='real' name='[avg_annual_value]' role='measure' type='quantitative' />
+      <column caption='Bathrooms' datatype='integer' name='[bathrooms]' role='measure' type='quantitative' />
+      <column caption='Bedrooms' datatype='integer' name='[bedrooms]' role='measure' type='quantitative' />
+      <column caption='Buy Horizon' datatype='date' name='[buy_horizon]' role='dimension' type='ordinal' />
+      <column caption='Buy Side Flip' datatype='integer' name='[buy_side_flip]' role='measure' type='quantitative' />
+      <column caption='Buyer Bnk Ind' datatype='integer' name='[buyer_bnk_ind]' role='measure' type='quantitative' />
+      <column caption='Buyer Bus Ind' datatype='integer' name='[buyer_bus_ind]' role='measure' type='quantitative' />
+      <column caption='Buyer Gov Ind' datatype='integer' name='[buyer_gov_ind]' role='measure' type='quantitative' />
+      <column caption='Buyer Gse Ind' datatype='integer' name='[buyer_gse_ind]' role='measure' type='quantitative' />
+      <column caption='Buyer Llc Ind' datatype='integer' name='[buyer_llc_ind]' role='measure' type='quantitative' />
+      <column caption='Buyer Purchases' datatype='integer' name='[buyer_purchases]' role='measure' type='quantitative' />
+      <column caption='Buyer Trst Ind' datatype='integer' name='[buyer_trst_ind]' role='measure' type='quantitative' />
+      <column caption='Cash Sale' datatype='integer' name='[cash_sale]' role='measure' type='quantitative' />
+      <column caption='Current Owner' datatype='integer' name='[current_owner]' role='measure' type='quantitative' />
+      <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+      <column caption='Flip Horizon' datatype='integer' name='[flip_horizon]' role='measure' type='quantitative' />
+      <column caption='Flip Ind' datatype='integer' name='[flip_ind]' role='measure' type='quantitative' />
+      <column caption='Flip Term' datatype='string' name='[flip_term]' role='dimension' type='nominal' />
+      <column caption='Intersf' datatype='integer' name='[intersf]' role='measure' type='quantitative' />
+      <column caption='Inv To Inv' datatype='integer' name='[inv_to_inv]' role='measure' type='quantitative' />
+      <column caption='Investor Type Purchase' datatype='string' name='[investor_type_purchase]' role='dimension' type='nominal' />
+      <column caption='Investor Type Purchase Building' datatype='string' name='[investor_type_purchase_building]' role='dimension' type='nominal' />
+      <column caption='Investor Type Purchase Count' datatype='string' name='[investor_type_purchase_count]' role='dimension' type='nominal' />
+      <column caption='Investor Type Purchase Llc' datatype='string' name='[investor_type_purchase_llc]' role='dimension' type='nominal' />
+      <column caption='Investor Type Purchase Value' datatype='string' name='[investor_type_purchase_value]' role='dimension' type='nominal' />
+      <column caption='Investor Type Sale' datatype='string' name='[investor_type_sale]' role='dimension' type='nominal' />
+      <column caption='Investor Type Sale Building' datatype='string' name='[investor_type_sale_building]' role='dimension' type='nominal' />
+      <column caption='Investor Type Sale Count' datatype='string' name='[investor_type_sale_count]' role='dimension' type='nominal' />
+      <column caption='Investor Type Sale Llc' datatype='string' name='[investor_type_sale_llc]' role='dimension' type='nominal' />
+      <column caption='Investor Type Sale Value' datatype='string' name='[investor_type_sale_value]' role='dimension' type='nominal' />
+      <column caption='Lasqbin' datatype='string' name='[lasqbin]' role='dimension' type='nominal' />
+      <column aggregation='Avg' caption='Lat' datatype='real' name='[lat]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' caption='Lon' datatype='real' name='[lon]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='Lotsize' datatype='integer' name='[lotsize]' role='measure' type='quantitative' />
+      <column caption='Month Horizon' datatype='string' name='[month_horizon]' role='dimension' type='nominal' />
+      <column caption='Mortgage' datatype='real' name='[mortgage]' role='measure' type='quantitative' />
+      <column caption='Price' datatype='real' name='[price]' role='measure' type='quantitative' />
+      <column caption='Price Diff' datatype='real' name='[price_diff]' role='measure' type='quantitative' />
+      <column caption='Price Diff Pch' datatype='real' name='[price_diff_pch]' role='measure' type='quantitative' />
+      <column caption='Proptype' datatype='string' name='[proptype]' role='dimension' type='nominal' />
+      <column caption='Prsldate' datatype='date' name='[prsldate]' role='dimension' type='ordinal' />
+      <column caption='Prslpr' datatype='real' name='[prslpr]' role='measure' type='quantitative' />
+      <column caption='restype R1F' datatype='integer' name='[restype_R1F]' role='measure' type='quantitative' />
+      <column caption='Sell Side Flip' datatype='integer' name='[sell_side_flip]' role='measure' type='quantitative' />
+      <column caption='Seller Bnk Ind' datatype='integer' name='[seller_bnk_ind]' role='measure' type='quantitative' />
+      <column caption='Seller Bus Ind' datatype='integer' name='[seller_bus_ind]' role='measure' type='quantitative' />
+      <column caption='Seller Gov Ind' datatype='integer' name='[seller_gov_ind]' role='measure' type='quantitative' />
+      <column caption='Seller Gse Ind' datatype='integer' name='[seller_gse_ind]' role='measure' type='quantitative' />
+      <column caption='Seller Llc Ind' datatype='integer' name='[seller_llc_ind]' role='measure' type='quantitative' />
+      <column caption='Seller Llp Ind' datatype='integer' name='[seller_llp_ind]' role='measure' type='quantitative' />
+      <column caption='Seller Trst Ind' datatype='integer' name='[seller_trst_ind]' role='measure' type='quantitative' />
+      <column caption='Street' datatype='string' name='[street]' role='dimension' type='nominal' />
+      <column caption='Style' datatype='string' name='[style]' role='dimension' type='nominal' />
+      <column caption='Tot Owned' datatype='integer' name='[tot_owned]' role='measure' type='quantitative' />
+      <column caption='Totrooms' datatype='integer' name='[totrooms]' role='measure' type='quantitative' />
+      <column caption='Usage' datatype='string' name='[usage]' role='dimension' type='nominal' />
+      <column caption='Usecode' datatype='integer' name='[usecode]' role='measure' type='quantitative' />
+      <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+      <column caption='Yearbuilt' datatype='integer' name='[yearbuilt]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Zip' datatype='integer' default-format='*00000' name='[zip]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/AMITRA~1/AppData/Local/Temp/TableauTemp/#TableauTemp_1al51t810dl4171fzw1et0bb1xby.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='02/16/2025 03:32:53 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>address</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[address]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>address</remote-alias>
+              <ordinal>0</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>22372</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>street</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[street]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>street</remote-alias>
+              <ordinal>1</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>458</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>proptype</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[proptype]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>proptype</remote-alias>
+              <ordinal>2</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>20</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>date</remote-alias>
+              <ordinal>3</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>8991</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>price</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[price]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>price</remote-alias>
+              <ordinal>4</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3775</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>prsldate</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[prsldate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>prsldate</remote-alias>
+              <ordinal>5</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>7695</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>prslpr</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[prslpr]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>prslpr</remote-alias>
+              <ordinal>6</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3370</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>mortgage</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[mortgage]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>mortgage</remote-alias>
+              <ordinal>7</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3697</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>usecode</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[usecode]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>usecode</remote-alias>
+              <ordinal>8</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>44</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>usage</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[usage]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>usage</remote-alias>
+              <ordinal>9</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>44</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>style</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[style]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>style</remote-alias>
+              <ordinal>10</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>19</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>yearbuilt</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[yearbuilt]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>yearbuilt</remote-alias>
+              <ordinal>11</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>250</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>totrooms</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[totrooms]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>totrooms</remote-alias>
+              <ordinal>12</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>20</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>bathrooms</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[bathrooms]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>bathrooms</remote-alias>
+              <ordinal>13</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>bedrooms</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[bedrooms]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>bedrooms</remote-alias>
+              <ordinal>14</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>13</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>lotsize</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[lotsize]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>lotsize</remote-alias>
+              <ordinal>15</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4029</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>intersf</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[intersf]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>intersf</remote-alias>
+              <ordinal>16</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4382</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>lasqbin</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[lasqbin]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>lasqbin</remote-alias>
+              <ordinal>17</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>170</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>amenity</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[amenity]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>amenity</remote-alias>
+              <ordinal>18</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>93</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>zip</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[zip]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>zip</remote-alias>
+              <ordinal>19</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>37</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>lat</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[lat]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>lat</remote-alias>
+              <ordinal>20</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4791</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>lon</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[lon]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>lon</remote-alias>
+              <ordinal>21</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4904</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>year</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>year</remote-alias>
+              <ordinal>22</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>23</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cash_sale</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[cash_sale]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cash_sale</remote-alias>
+              <ordinal>23</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>buyer_llc_ind</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[buyer_llc_ind]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>buyer_llc_ind</remote-alias>
+              <ordinal>24</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>buyer_bus_ind</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[buyer_bus_ind]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>buyer_bus_ind</remote-alias>
+              <ordinal>25</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>buyer_trst_ind</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[buyer_trst_ind]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>buyer_trst_ind</remote-alias>
+              <ordinal>26</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>buyer_bnk_ind</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[buyer_bnk_ind]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>buyer_bnk_ind</remote-alias>
+              <ordinal>27</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>buyer_gse_ind</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[buyer_gse_ind]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>buyer_gse_ind</remote-alias>
+              <ordinal>28</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>buyer_gov_ind</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[buyer_gov_ind]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>buyer_gov_ind</remote-alias>
+              <ordinal>29</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>seller_llc_ind</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[seller_llc_ind]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>seller_llc_ind</remote-alias>
+              <ordinal>30</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>seller_llp_ind</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[seller_llp_ind]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>seller_llp_ind</remote-alias>
+              <ordinal>31</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>seller_bus_ind</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[seller_bus_ind]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>seller_bus_ind</remote-alias>
+              <ordinal>32</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>seller_trst_ind</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[seller_trst_ind]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>seller_trst_ind</remote-alias>
+              <ordinal>33</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>seller_bnk_ind</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[seller_bnk_ind]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>seller_bnk_ind</remote-alias>
+              <ordinal>34</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>seller_gse_ind</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[seller_gse_ind]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>seller_gse_ind</remote-alias>
+              <ordinal>35</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>seller_gov_ind</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[seller_gov_ind]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>seller_gov_ind</remote-alias>
+              <ordinal>36</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>flip_horizon</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[flip_horizon]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>flip_horizon</remote-alias>
+              <ordinal>37</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8644</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>flip_ind</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[flip_ind]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>flip_ind</remote-alias>
+              <ordinal>38</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>buy_side_flip</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[buy_side_flip]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>buy_side_flip</remote-alias>
+              <ordinal>39</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>sell_side_flip</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[sell_side_flip]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>sell_side_flip</remote-alias>
+              <ordinal>40</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>price_diff</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[price_diff]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>price_diff</remote-alias>
+              <ordinal>41</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2996</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>price_diff_pch</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[price_diff_pch]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>price_diff_pch</remote-alias>
+              <ordinal>42</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7353</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>month_horizon</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[month_horizon]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>month_horizon</remote-alias>
+              <ordinal>43</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>55</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>flip_term</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[flip_term]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>flip_term</remote-alias>
+              <ordinal>44</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>buy_horizon</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[buy_horizon]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>buy_horizon</remote-alias>
+              <ordinal>45</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>8991</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>investor_type_purchase_count</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[investor_type_purchase_count]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>investor_type_purchase_count</remote-alias>
+              <ordinal>46</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>investor_type_sale_count</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[investor_type_sale_count]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>investor_type_sale_count</remote-alias>
+              <ordinal>47</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>investor_type_purchase_llc</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[investor_type_purchase_llc]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>investor_type_purchase_llc</remote-alias>
+              <ordinal>48</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>investor_type_sale_llc</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[investor_type_sale_llc]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>investor_type_sale_llc</remote-alias>
+              <ordinal>49</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>investor_type_purchase_building</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[investor_type_purchase_building]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>investor_type_purchase_building</remote-alias>
+              <ordinal>50</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>investor_type_sale_building</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[investor_type_sale_building]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>investor_type_sale_building</remote-alias>
+              <ordinal>51</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>avg_annual_value</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_annual_value]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_annual_value</remote-alias>
+              <ordinal>52</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6188</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>investor_type_purchase_value</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[investor_type_purchase_value]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>investor_type_purchase_value</remote-alias>
+              <ordinal>53</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>investor_type_sale_value</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[investor_type_sale_value]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>investor_type_sale_value</remote-alias>
+              <ordinal>54</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>current_owner</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[current_owner]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>current_owner</remote-alias>
+              <ordinal>55</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>restype_R1F</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[restype_R1F]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>restype_R1F</remote-alias>
+              <ordinal>56</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>tot_owned</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[tot_owned]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>tot_owned</remote-alias>
+              <ordinal>57</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>55</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>buyer_purchases</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[buyer_purchases]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>buyer_purchases</remote-alias>
+              <ordinal>58</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>87</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>R1F_total</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[R1F_total]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>R1F_total</remote-alias>
+              <ordinal>59</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>20</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>investor_type_purchase</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[investor_type_purchase]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>investor_type_purchase</remote-alias>
+              <ordinal>60</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>investor_type_sale</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[investor_type_sale]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>investor_type_sale</remote-alias>
+              <ordinal>61</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>inv_to_inv</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[inv_to_inv]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>inv_to_inv</remote-alias>
+              <ordinal>62</ordinal>
+              <family>A2_EDA_Residential.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='A2_EDA_Residential.csv' id='A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460'>
+            <properties context=''>
+              <relation connection='textscan.0kyk9jd0c1p9721b0g8oi19k3msn' name='A2_EDA_Residential.csv' table='[A2_EDA_Residential#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='string' name='address' ordinal='0' />
+                  <column datatype='string' name='street' ordinal='1' />
+                  <column datatype='string' name='proptype' ordinal='2' />
+                  <column datatype='date' name='date' ordinal='3' />
+                  <column datatype='real' name='price' ordinal='4' />
+                  <column datatype='date' name='prsldate' ordinal='5' />
+                  <column datatype='real' name='prslpr' ordinal='6' />
+                  <column datatype='real' name='mortgage' ordinal='7' />
+                  <column datatype='integer' name='usecode' ordinal='8' />
+                  <column datatype='string' name='usage' ordinal='9' />
+                  <column datatype='string' name='style' ordinal='10' />
+                  <column datatype='integer' name='yearbuilt' ordinal='11' />
+                  <column datatype='integer' name='totrooms' ordinal='12' />
+                  <column datatype='integer' name='bathrooms' ordinal='13' />
+                  <column datatype='integer' name='bedrooms' ordinal='14' />
+                  <column datatype='integer' name='lotsize' ordinal='15' />
+                  <column datatype='integer' name='intersf' ordinal='16' />
+                  <column datatype='string' name='lasqbin' ordinal='17' />
+                  <column datatype='string' name='amenity' ordinal='18' />
+                  <column datatype='integer' name='zip' ordinal='19' />
+                  <column datatype='real' name='lat' ordinal='20' />
+                  <column datatype='real' name='lon' ordinal='21' />
+                  <column datatype='integer' name='year' ordinal='22' />
+                  <column datatype='integer' name='cash_sale' ordinal='23' />
+                  <column datatype='integer' name='buyer_llc_ind' ordinal='24' />
+                  <column datatype='integer' name='buyer_bus_ind' ordinal='25' />
+                  <column datatype='integer' name='buyer_trst_ind' ordinal='26' />
+                  <column datatype='integer' name='buyer_bnk_ind' ordinal='27' />
+                  <column datatype='integer' name='buyer_gse_ind' ordinal='28' />
+                  <column datatype='integer' name='buyer_gov_ind' ordinal='29' />
+                  <column datatype='integer' name='seller_llc_ind' ordinal='30' />
+                  <column datatype='integer' name='seller_llp_ind' ordinal='31' />
+                  <column datatype='integer' name='seller_bus_ind' ordinal='32' />
+                  <column datatype='integer' name='seller_trst_ind' ordinal='33' />
+                  <column datatype='integer' name='seller_bnk_ind' ordinal='34' />
+                  <column datatype='integer' name='seller_gse_ind' ordinal='35' />
+                  <column datatype='integer' name='seller_gov_ind' ordinal='36' />
+                  <column datatype='integer' name='flip_horizon' ordinal='37' />
+                  <column datatype='integer' name='flip_ind' ordinal='38' />
+                  <column datatype='integer' name='buy_side_flip' ordinal='39' />
+                  <column datatype='integer' name='sell_side_flip' ordinal='40' />
+                  <column datatype='real' name='price_diff' ordinal='41' />
+                  <column datatype='real' name='price_diff_pch' ordinal='42' />
+                  <column datatype='string' name='month_horizon' ordinal='43' />
+                  <column datatype='string' name='flip_term' ordinal='44' />
+                  <column datatype='date' name='buy_horizon' ordinal='45' />
+                  <column datatype='string' name='investor_type_purchase_count' ordinal='46' />
+                  <column datatype='string' name='investor_type_sale_count' ordinal='47' />
+                  <column datatype='string' name='investor_type_purchase_llc' ordinal='48' />
+                  <column datatype='string' name='investor_type_sale_llc' ordinal='49' />
+                  <column datatype='string' name='investor_type_purchase_building' ordinal='50' />
+                  <column datatype='string' name='investor_type_sale_building' ordinal='51' />
+                  <column datatype='real' name='avg_annual_value' ordinal='52' />
+                  <column datatype='string' name='investor_type_purchase_value' ordinal='53' />
+                  <column datatype='string' name='investor_type_sale_value' ordinal='54' />
+                  <column datatype='integer' name='current_owner' ordinal='55' />
+                  <column datatype='integer' name='restype_R1F' ordinal='56' />
+                  <column datatype='integer' name='tot_owned' ordinal='57' />
+                  <column datatype='integer' name='buyer_purchases' ordinal='58' />
+                  <column datatype='integer' name='R1F_total' ordinal='59' />
+                  <column datatype='string' name='investor_type_purchase' ordinal='60' />
+                  <column datatype='string' name='investor_type_sale' ordinal='61' />
+                  <column datatype='integer' name='inv_to_inv' ordinal='62' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 5'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Price by Style</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='A2_EDA_Residential' name='federated.0dpax2p0rn4zi011mbz1x129v3of' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0dpax2p0rn4zi011mbz1x129v3of'>
+            <column caption='Investor Type Sale' datatype='string' name='[investor_type_sale]' role='dimension' type='nominal' />
+            <column-instance column='[investor_type_sale]' derivation='None' name='[none:investor_type_sale:nk]' pivot='key' type='nominal' />
+            <column-instance column='[style]' derivation='None' name='[none:style:nk]' pivot='key' type='nominal' />
+            <column caption='Price' datatype='real' name='[price]' role='measure' type='quantitative' />
+            <column caption='Style' datatype='string' name='[style]' role='dimension' type='nominal' />
+            <column-instance column='[price]' derivation='Sum' name='[sum:price:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:style:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:style:nk]' />
+              <groupfilter function='member' level='[none:style:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:style:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:investor_type_sale:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:style:nk]</rows>
+        <cols>[federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:price:qk]</cols>
+      </table>
+      <simple-id uuid='{94B77CC2-037C-47FA-B905-45B215CA14B2}' />
+    </worksheet>
+    <worksheet name='Sheet 6'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Price by Year</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='A2_EDA_Residential' name='federated.0dpax2p0rn4zi011mbz1x129v3of' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0dpax2p0rn4zi011mbz1x129v3of'>
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column caption='Flip Term' datatype='string' name='[flip_term]' role='dimension' type='nominal' />
+            <column-instance column='[flip_term]' derivation='None' name='[none:flip_term:nk]' pivot='key' type='nominal' />
+            <column caption='Price' datatype='real' name='[price]' role='measure' type='quantitative' />
+            <column-instance column='[price]' derivation='Sum' name='[sum:price:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[date]' derivation='Year' name='[yr:date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:flip_term:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:price:qk]</rows>
+        <cols>[federated.0dpax2p0rn4zi011mbz1x129v3of].[yr:date:ok]</cols>
+      </table>
+      <simple-id uuid='{B830822D-3F02-4698-8EB4-900CEC4B3D52}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size maxheight='860' maxwidth='650' minheight='560' minwidth='420' />
+      <zones>
+        <zone h='53448' id='3' name='Sheet 5' w='99692' x='-308' y='4926' />
+        <zone h='15640' id='4' name='Sheet 5' pane-specification-id='0' param='[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:investor_type_sale:nk]' type-v2='color' w='21538' x='77385' y='4680' />
+        <zone h='44581' id='5' name='Sheet 6' w='97538' x='1692' y='55296' />
+        <zone h='13054' id='6' name='Sheet 6' pane-specification-id='4' param='[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:flip_term:nk]' type-v2='color' w='21538' x='28615' y='57020' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='1' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{46C7000A-6F0B-4BEC-B4BF-47FD12AEB2D4}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' name='Sheet 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:investor_type_sale:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{9EBD1ECD-5003-4FC9-B384-FFEA6FEE90DA}' />
+    </window>
+    <window class='worksheet' name='Sheet 6'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='4' param='[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:flip_term:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{40DD6EEF-6059-4AB7-BA50-8AC29F76A75E}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Sheet 5' />
+        <viewpoint name='Sheet 6'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='6' />
+      <simple-id uuid='{649EB0FA-D60E-4408-B729-301F884C6888}' />
+    </window>
+  </windows>
+</workbook>
