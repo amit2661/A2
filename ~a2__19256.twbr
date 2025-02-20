@@ -6,11 +6,11 @@
     <AccessibleZoneTabOrder />
     <AnimationOnByDefault />
     <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MapboxVectorStylesAndLayers />
     <MarkAnimation />
     <ObjectModelEncapsulateLegacy />
     <ObjectModelExtractV2 />
     <ObjectModelTableType />
-    <SavingAnalyticObjects />
     <SchemaViewerObjectModel />
     <SetMembershipControl />
     <SheetIdentifierTracking />
@@ -32,7 +32,7 @@
           </named-connection>
         </named-connections>
         <relation connection='textscan.0kyk9jd0c1p9721b0g8oi19k3msn' name='A2_EDA_Residential.csv' table='[A2_EDA_Residential#csv]' type='table'>
-          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
             <column datatype='string' name='address' ordinal='0' />
             <column datatype='string' name='street' ordinal='1' />
             <column datatype='string' name='proptype' ordinal='2' />
@@ -108,11 +108,10 @@
             <contains-null>true</contains-null>
             <attributes>
               <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
-              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
-              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
               <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
               <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
-              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
               <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
             </attributes>
           </metadata-record>
@@ -128,7 +127,7 @@
             <scale>1</scale>
             <width>1073741823</width>
             <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RGB' />
+            <collation flag='0' name='LEN_RUS' />
             <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
           </metadata-record>
           <metadata-record class='column'>
@@ -143,7 +142,7 @@
             <scale>1</scale>
             <width>1073741823</width>
             <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RGB' />
+            <collation flag='0' name='LEN_RUS' />
             <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
           </metadata-record>
           <metadata-record class='column'>
@@ -158,7 +157,7 @@
             <scale>1</scale>
             <width>1073741823</width>
             <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RGB' />
+            <collation flag='0' name='LEN_RUS' />
             <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
           </metadata-record>
           <metadata-record class='column'>
@@ -245,7 +244,7 @@
             <scale>1</scale>
             <width>1073741823</width>
             <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RGB' />
+            <collation flag='0' name='LEN_RUS' />
             <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
           </metadata-record>
           <metadata-record class='column'>
@@ -260,7 +259,7 @@
             <scale>1</scale>
             <width>1073741823</width>
             <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RGB' />
+            <collation flag='0' name='LEN_RUS' />
             <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
           </metadata-record>
           <metadata-record class='column'>
@@ -347,7 +346,7 @@
             <scale>1</scale>
             <width>1073741823</width>
             <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RGB' />
+            <collation flag='0' name='LEN_RUS' />
             <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
           </metadata-record>
           <metadata-record class='column'>
@@ -362,7 +361,7 @@
             <scale>1</scale>
             <width>1073741823</width>
             <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RGB' />
+            <collation flag='0' name='LEN_RUS' />
             <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
           </metadata-record>
           <metadata-record class='column'>
@@ -665,7 +664,7 @@
             <scale>1</scale>
             <width>1073741823</width>
             <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RGB' />
+            <collation flag='0' name='LEN_RUS' />
             <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
           </metadata-record>
           <metadata-record class='column'>
@@ -680,7 +679,7 @@
             <scale>1</scale>
             <width>1073741823</width>
             <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RGB' />
+            <collation flag='0' name='LEN_RUS' />
             <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
           </metadata-record>
           <metadata-record class='column'>
@@ -707,7 +706,7 @@
             <scale>1</scale>
             <width>1073741823</width>
             <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RGB' />
+            <collation flag='0' name='LEN_RUS' />
             <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
           </metadata-record>
           <metadata-record class='column'>
@@ -722,7 +721,7 @@
             <scale>1</scale>
             <width>1073741823</width>
             <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RGB' />
+            <collation flag='0' name='LEN_RUS' />
             <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
           </metadata-record>
           <metadata-record class='column'>
@@ -737,7 +736,7 @@
             <scale>1</scale>
             <width>1073741823</width>
             <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RGB' />
+            <collation flag='0' name='LEN_RUS' />
             <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
           </metadata-record>
           <metadata-record class='column'>
@@ -752,7 +751,7 @@
             <scale>1</scale>
             <width>1073741823</width>
             <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RGB' />
+            <collation flag='0' name='LEN_RUS' />
             <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
           </metadata-record>
           <metadata-record class='column'>
@@ -767,7 +766,7 @@
             <scale>1</scale>
             <width>1073741823</width>
             <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RGB' />
+            <collation flag='0' name='LEN_RUS' />
             <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
           </metadata-record>
           <metadata-record class='column'>
@@ -782,7 +781,7 @@
             <scale>1</scale>
             <width>1073741823</width>
             <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RGB' />
+            <collation flag='0' name='LEN_RUS' />
             <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
           </metadata-record>
           <metadata-record class='column'>
@@ -809,7 +808,7 @@
             <scale>1</scale>
             <width>1073741823</width>
             <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RGB' />
+            <collation flag='0' name='LEN_RUS' />
             <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
           </metadata-record>
           <metadata-record class='column'>
@@ -824,7 +823,7 @@
             <scale>1</scale>
             <width>1073741823</width>
             <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RGB' />
+            <collation flag='0' name='LEN_RUS' />
             <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
           </metadata-record>
           <metadata-record class='column'>
@@ -899,7 +898,7 @@
             <scale>1</scale>
             <width>1073741823</width>
             <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RGB' />
+            <collation flag='0' name='LEN_RUS' />
             <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
           </metadata-record>
           <metadata-record class='column'>
@@ -914,7 +913,7 @@
             <scale>1</scale>
             <width>1073741823</width>
             <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RGB' />
+            <collation flag='0' name='LEN_RUS' />
             <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
           </metadata-record>
           <metadata-record class='column'>
@@ -997,9 +996,8 @@
       <column caption='Yearbuilt' datatype='integer' name='[yearbuilt]' role='measure' type='quantitative' />
       <column aggregation='Sum' caption='Zip' datatype='integer' default-format='*00000' name='[zip]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
       <column-instance column='[flip_term]' derivation='None' name='[none:flip_term:nk]' pivot='key' type='nominal' />
-      <column-instance column='[price]' derivation='Sum' name='[sum:price:qk]' pivot='key' type='quantitative' />
       <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
-        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/AMITRA~1/AppData/Local/Temp/TableauTemp/#TableauTemp_1al51t810dl4171fzw1et0bb1xby.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='02/16/2025 03:32:53 AM' username='tableau_internal_user'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/AMITRA~1/AppData/Local/Temp/TableauTemp/#TableauTemp_07sqt830o2otl116mcutw1oum97f.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='02/18/2025 08:27:48 PM' username='tableau_internal_user'>
           <relation name='Extract' table='[Extract].[Extract]' type='table' />
           <metadata-records>
             <metadata-record class='column'>
@@ -1014,7 +1012,7 @@
               <aggregation>Count</aggregation>
               <approx-count>22372</approx-count>
               <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RGB' />
+              <collation flag='0' name='LEN_RUS' />
               <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
             </metadata-record>
             <metadata-record class='column'>
@@ -1029,7 +1027,7 @@
               <aggregation>Count</aggregation>
               <approx-count>458</approx-count>
               <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RGB' />
+              <collation flag='0' name='LEN_RUS' />
               <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
             </metadata-record>
             <metadata-record class='column'>
@@ -1044,7 +1042,7 @@
               <aggregation>Count</aggregation>
               <approx-count>20</approx-count>
               <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RGB' />
+              <collation flag='0' name='LEN_RUS' />
               <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
             </metadata-record>
             <metadata-record class='column'>
@@ -1143,7 +1141,7 @@
               <aggregation>Count</aggregation>
               <approx-count>44</approx-count>
               <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RGB' />
+              <collation flag='0' name='LEN_RUS' />
               <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
             </metadata-record>
             <metadata-record class='column'>
@@ -1158,7 +1156,7 @@
               <aggregation>Count</aggregation>
               <approx-count>19</approx-count>
               <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RGB' />
+              <collation flag='0' name='LEN_RUS' />
               <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
             </metadata-record>
             <metadata-record class='column'>
@@ -1257,7 +1255,7 @@
               <aggregation>Count</aggregation>
               <approx-count>170</approx-count>
               <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RGB' />
+              <collation flag='0' name='LEN_RUS' />
               <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
             </metadata-record>
             <metadata-record class='column'>
@@ -1272,7 +1270,7 @@
               <aggregation>Count</aggregation>
               <approx-count>93</approx-count>
               <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RGB' />
+              <collation flag='0' name='LEN_RUS' />
               <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
             </metadata-record>
             <metadata-record class='column'>
@@ -1623,7 +1621,7 @@
               <aggregation>Count</aggregation>
               <approx-count>55</approx-count>
               <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RGB' />
+              <collation flag='0' name='LEN_RUS' />
               <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
             </metadata-record>
             <metadata-record class='column'>
@@ -1638,7 +1636,7 @@
               <aggregation>Count</aggregation>
               <approx-count>4</approx-count>
               <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RGB' />
+              <collation flag='0' name='LEN_RUS' />
               <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
             </metadata-record>
             <metadata-record class='column'>
@@ -1667,7 +1665,7 @@
               <aggregation>Count</aggregation>
               <approx-count>5</approx-count>
               <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RGB' />
+              <collation flag='0' name='LEN_RUS' />
               <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
             </metadata-record>
             <metadata-record class='column'>
@@ -1682,7 +1680,7 @@
               <aggregation>Count</aggregation>
               <approx-count>5</approx-count>
               <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RGB' />
+              <collation flag='0' name='LEN_RUS' />
               <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
             </metadata-record>
             <metadata-record class='column'>
@@ -1697,7 +1695,7 @@
               <aggregation>Count</aggregation>
               <approx-count>2</approx-count>
               <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RGB' />
+              <collation flag='0' name='LEN_RUS' />
               <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
             </metadata-record>
             <metadata-record class='column'>
@@ -1712,7 +1710,7 @@
               <aggregation>Count</aggregation>
               <approx-count>2</approx-count>
               <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RGB' />
+              <collation flag='0' name='LEN_RUS' />
               <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
             </metadata-record>
             <metadata-record class='column'>
@@ -1727,7 +1725,7 @@
               <aggregation>Count</aggregation>
               <approx-count>2</approx-count>
               <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RGB' />
+              <collation flag='0' name='LEN_RUS' />
               <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
             </metadata-record>
             <metadata-record class='column'>
@@ -1742,7 +1740,7 @@
               <aggregation>Count</aggregation>
               <approx-count>2</approx-count>
               <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RGB' />
+              <collation flag='0' name='LEN_RUS' />
               <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
             </metadata-record>
             <metadata-record class='column'>
@@ -1771,7 +1769,7 @@
               <aggregation>Count</aggregation>
               <approx-count>5</approx-count>
               <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RGB' />
+              <collation flag='0' name='LEN_RUS' />
               <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
             </metadata-record>
             <metadata-record class='column'>
@@ -1786,7 +1784,7 @@
               <aggregation>Count</aggregation>
               <approx-count>5</approx-count>
               <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RGB' />
+              <collation flag='0' name='LEN_RUS' />
               <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
             </metadata-record>
             <metadata-record class='column'>
@@ -1871,7 +1869,7 @@
               <aggregation>Count</aggregation>
               <approx-count>5</approx-count>
               <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RGB' />
+              <collation flag='0' name='LEN_RUS' />
               <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
             </metadata-record>
             <metadata-record class='column'>
@@ -1886,7 +1884,7 @@
               <aggregation>Count</aggregation>
               <approx-count>5</approx-count>
               <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RGB' />
+              <collation flag='0' name='LEN_RUS' />
               <object-id>[A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460]</object-id>
             </metadata-record>
             <metadata-record class='column'>
@@ -1909,44 +1907,6 @@
       <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
       <style>
         <style-rule element='mark'>
-          <encoding attr='color' field='[none:AdhocCluster:1:ok]' type='palette'>
-            <map to='#499894'>
-              <bucket>9</bucket>
-            </map>
-            <map to='#4e79a7'>
-              <bucket>1</bucket>
-            </map>
-            <map to='#59a14f'>
-              <bucket>5</bucket>
-            </map>
-            <map to='#86bcb6'>
-              <bucket>10</bucket>
-            </map>
-            <map to='#8cd17d'>
-              <bucket>6</bucket>
-            </map>
-            <map to='#a0cbe8'>
-              <bucket>2</bucket>
-            </map>
-            <map to='#b6992d'>
-              <bucket>7</bucket>
-            </map>
-            <map to='#e15759'>
-              <bucket>11</bucket>
-            </map>
-            <map to='#f1ce63'>
-              <bucket>8</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>3</bucket>
-            </map>
-            <map to='#ff9d9a'>
-              <bucket>12</bucket>
-            </map>
-            <map to='#ffbe7d'>
-              <bucket>4</bucket>
-            </map>
-          </encoding>
           <encoding attr='color' field='[none:flip_term:nk]' type='palette'>
             <map to='#4e79a7'>
               <bucket>&quot;Long-term&quot;</bucket>
@@ -1966,27 +1926,12 @@
       <semantic-values>
         <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
       </semantic-values>
-      <analytic-model>
-        <name>
-          <field name='[AnalyticModel:{adeb0314-4352-49eb-8792-0f0d33604936}]' />
-        </name>
-        <analytic-model-specifications class='cluster-specifications'>
-          <analysis-fields>
-            <field name='[federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:price:qk]' />
-          </analysis-fields>
-          <filter-fields />
-          <lod-fields />
-          <number-of-desired-clusters>0</number-of-desired-clusters>
-          <is-dissagregate>false</is-dissagregate>
-        </analytic-model-specifications>
-        <result-fields />
-      </analytic-model>
       <object-graph>
         <objects>
           <object caption='A2_EDA_Residential.csv' id='A2_EDA_Residential.csv_FBF8AF0067514D90978781F6A05FB460'>
             <properties context=''>
               <relation connection='textscan.0kyk9jd0c1p9721b0g8oi19k3msn' name='A2_EDA_Residential.csv' table='[A2_EDA_Residential#csv]' type='table'>
-                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
                   <column datatype='string' name='address' ordinal='0' />
                   <column datatype='string' name='street' ordinal='1' />
                   <column datatype='string' name='proptype' ordinal='2' />
@@ -2061,7 +2006,51 @@
       </object-graph>
     </datasource>
   </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
   <worksheets>
+    <worksheet name='Sheet 10'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='A2_EDA_Residential' name='federated.0dpax2p0rn4zi011mbz1x129v3of' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0dpax2p0rn4zi011mbz1x129v3of'>
+            <column-instance column='[zip]' derivation='None' name='[none:zip:ok]' pivot='key' type='ordinal' />
+            <column aggregation='Sum' caption='Zip' datatype='integer' default-format='*00000' name='[zip]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0dpax2p0rn4zi011mbz1x129v3of].[Longitude (generated)]' field-type='quantitative' max='-7707720.8349525407' min='-8047864.8183351532' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0dpax2p0rn4zi011mbz1x129v3of].[Latitude (generated)]' field-type='quantitative' max='5334494.8471420966' min='5175238.0561119393' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <encodings>
+              <lod column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:zip:ok]' />
+              <geometry column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[Geometry (generated)]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0dpax2p0rn4zi011mbz1x129v3of].[Latitude (generated)]</rows>
+        <cols>[federated.0dpax2p0rn4zi011mbz1x129v3of].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{C2883000-6D88-463B-937C-2430D9B154E6}' />
+    </worksheet>
     <worksheet name='Sheet 5'>
       <layout-options>
         <title>
@@ -2177,18 +2166,13 @@
             <column caption='Cash Sale' datatype='integer' name='[cash_sale]' role='measure' type='quantitative' />
             <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
             <column caption='Flip Horizon' datatype='integer' name='[flip_horizon]' role='measure' type='quantitative' />
-            <column caption='Price' datatype='real' name='[price]' role='measure' type='quantitative' />
             <column-instance column='[buy_side_flip]' derivation='Sum' name='[sum:buy_side_flip:qk]' pivot='key' type='quantitative' />
             <column-instance column='[cash_sale]' derivation='Sum' name='[sum:cash_sale:qk]' pivot='key' type='quantitative' />
             <column-instance column='[flip_horizon]' derivation='Sum' name='[sum:flip_horizon:qk]' pivot='key' type='quantitative' />
-            <column-instance column='[price]' derivation='Sum' name='[sum:price:qk]' pivot='key' type='quantitative' />
             <column-instance column='[date]' derivation='Year' name='[yr:date:ok]' pivot='key' type='ordinal' />
           </datasource-dependencies>
           <filter class='categorical' column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[:Measure Names]'>
-            <groupfilter function='union' user:op='manual'>
-              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:cash_sale:qk]&quot;' />
-              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:price:qk]&quot;' />
-            </groupfilter>
+            <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:cash_sale:qk]&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <slices>
             <column>[federated.0dpax2p0rn4zi011mbz1x129v3of].[:Measure Names]</column>
@@ -2198,6 +2182,7 @@
         <style>
           <style-rule element='mark'>
             <encoding attr='color' field='[federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:cash_sale:qk]' num-steps='5' type='interpolated' />
+            <encoding attr='color' field='[federated.0dpax2p0rn4zi011mbz1x129v3of].[Multiple Values]' num-steps='5' type='interpolated' />
           </style-rule>
         </style>
         <panes>
@@ -2252,6 +2237,86 @@
       </table>
       <simple-id uuid='{68DE719B-49DE-4354-B76F-4CD149895E51}' />
     </worksheet>
+    <worksheet name='Sheet 8'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='A2_EDA_Residential' name='federated.0dpax2p0rn4zi011mbz1x129v3of' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0dpax2p0rn4zi011mbz1x129v3of'>
+            <column-instance column='[proptype]' derivation='Count' name='[cnt:proptype:qk]' pivot='key' type='quantitative' />
+            <column caption='Flip Term' datatype='string' name='[flip_term]' role='dimension' type='nominal' />
+            <column-instance column='[flip_term]' derivation='None' name='[none:flip_term:nk]' pivot='key' type='nominal' />
+            <column caption='Proptype' datatype='string' name='[proptype]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0dpax2p0rn4zi011mbz1x129v3of].[cnt:proptype:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0dpax2p0rn4zi011mbz1x129v3of].[Latitude (generated)]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:flip_term:nk]</rows>
+        <cols>([federated.0dpax2p0rn4zi011mbz1x129v3of].[cnt:proptype:qk] + [federated.0dpax2p0rn4zi011mbz1x129v3of].[Latitude (generated)])</cols>
+      </table>
+      <simple-id uuid='{9560C3CB-EADC-4ED0-836C-106E94044CDF}' />
+    </worksheet>
+    <worksheet name='Sheet 9'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='A2_EDA_Residential' name='federated.0dpax2p0rn4zi011mbz1x129v3of' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0dpax2p0rn4zi011mbz1x129v3of'>
+            <column-instance column='[zip]' derivation='None' name='[none:zip:ok]' pivot='key' type='ordinal' />
+            <column aggregation='Sum' caption='Zip' datatype='integer' default-format='*00000' name='[zip]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0dpax2p0rn4zi011mbz1x129v3of].[Longitude (generated)]' field-type='quantitative' max='-7882544.6762935957' min='-7930366.1577275703' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0dpax2p0rn4zi011mbz1x129v3of].[Latitude (generated)]' field-type='quantitative' max='5228862.8182064164' min='5206472.6068619573' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:zip:ok]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0dpax2p0rn4zi011mbz1x129v3of].[Latitude (generated)]</rows>
+        <cols>[federated.0dpax2p0rn4zi011mbz1x129v3of].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{724EE748-402B-4B5C-A157-0D8B1AF817D5}' />
+    </worksheet>
   </worksheets>
   <dashboards>
     <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
@@ -2286,7 +2351,7 @@
       <size maxheight='860' maxwidth='650' minheight='560' minwidth='420' />
       <zones>
         <zone h='61631' id='3' name='Sheet 7' w='96769' x='2462' y='1559' />
-        <zone h='10552' id='4' name='Sheet 7' pane-specification-id='1' param='[federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:cash_sale:qk]' type-v2='color' w='21538' x='76615' y='1559' />
+        <zone h='10552' id='4' name='Sheet 7' pane-specification-id='1' param='[federated.0dpax2p0rn4zi011mbz1x129v3of].[Multiple Values]' type-v2='color' w='21538' x='76615' y='1559' />
       </zones>
       <devicelayouts>
         <devicelayout auto-generated='true' name='Phone'>
@@ -2307,7 +2372,7 @@
       <simple-id uuid='{A8B816DA-85CB-44C8-BEF5-081A198CAEB9}' />
     </dashboard>
   </dashboards>
-  <windows source-height='30'>
+  <windows source-height='37'>
     <window class='worksheet' name='Sheet 5'>
       <cards>
         <edge name='left'>
@@ -2318,13 +2383,13 @@
           </strip>
         </edge>
         <edge name='top'>
-          <strip size='38'>
+          <strip size='37'>
             <card type='columns' />
           </strip>
-          <strip size='38'>
+          <strip size='37'>
             <card type='rows' />
           </strip>
-          <strip size='38'>
+          <strip size='37'>
             <card type='title' />
           </strip>
         </edge>
@@ -2346,13 +2411,13 @@
           </strip>
         </edge>
         <edge name='top'>
-          <strip size='38'>
+          <strip size='37'>
             <card type='columns' />
           </strip>
-          <strip size='38'>
+          <strip size='37'>
             <card type='rows' />
           </strip>
-          <strip size='38'>
+          <strip size='37'>
             <card type='title' />
           </strip>
         </edge>
@@ -2374,7 +2439,7 @@
       <active id='-1' />
       <simple-id uuid='{649EB0FA-D60E-4408-B729-301F884C6888}' />
     </window>
-    <window class='worksheet' maximized='true' name='Sheet 7'>
+    <window class='worksheet' name='Sheet 7'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -2391,7 +2456,7 @@
           <strip size='2147483647'>
             <card type='rows' />
           </strip>
-          <strip size='31'>
+          <strip size='2147483647'>
             <card type='title' />
           </strip>
         </edge>
@@ -2411,6 +2476,78 @@
       </viewpoints>
       <active id='-1' />
       <simple-id uuid='{364A5550-185A-4639-A15C-2A996F1AB246}' />
+    </window>
+    <window class='worksheet' name='Sheet 8'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{58A0C637-7C5E-4984-A861-768399EFBE50}' />
+    </window>
+    <window class='worksheet' name='Sheet 9'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{0A7E7BB6-D93E-4FDE-ADE1-FB59698FBC6E}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 10'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{0379F504-F7BD-48C3-B642-A12CB77A9866}' />
     </window>
   </windows>
 </workbook>

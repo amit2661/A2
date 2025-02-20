@@ -40,9 +40,10 @@
 				</ol>
 				
 				<p> This dataset gives us useful insights into tracking investor-driven price increases and assessing the
-					impact of cash sales, identifying absentee ownership and mapping speculation hotspots. However, there are
-					limitations with respect to missing data in fields like mortgage status, 
-					contextual factors such as zoning laws, and investor related nuances which required additional filtering.
+					impact of cash sales, identifying absentee ownership and mapping speculation hotspots. <br>
+					However, there are
+					limitations with respect to large number of Null values (intentionally retained in Figure 1), lack of clarity between fields year and yearbuilt and unclear acronyms like RCD in property type. There are also
+					contextual factors such as zoning laws, and investor related nuances which require additional data processing.
 				</p>
 					
 				
@@ -102,7 +103,7 @@
 			<figure>
 				<img src="Capture 1.PNG" alt="" style="width: 1200px; height: auto;"/>
 				<figcaption>
-					This bar chart shows the total price of properties for different style categories. The bars have been further colour coded to investigate the investor type. As we can see, this dataset has a large number of NULL values probably for properties which either do not fall under a typical style or have not been categorised properly.  We can also see very few Colonial, duplex or decker houses built in the city. Hence, two further questions regarding data distribution arise: (1) what are the other features of this NULL records? Were these bought in cash? etc (2) Have the contemporary houses been categorised as Condo, low rise and such subcategories? We will explore these concepts subsequently.
+					This bar chart shows the total price of properties for different style categories. The bars have been further colour coded to investigate what type of buildings do the investor most invest in. As we can see, this dataset has a large number of NULL values probably for properties which either do not fall under a typical style or have not been categorised properly.  We can also see very few contemporary, duplex, colonial, or decker houses built in the city. Some conclusions are intuitive like duplex are less common in the city while others are elusive. Hence, two further questions regarding data distribution arise: (1) what are the other features of these NULL records? Were these bought in cash? etc (2) Have the contemporary houses been categorised as Condo, low rise and such subcategories? We will get back to these queries later in the article.
 					
 				</figcaption>
 			</figure>
@@ -110,7 +111,7 @@
 			<figure>
 				<img src="Capture 2.PNG" alt="" style="width: 1200px; height: auto;"/>
 				<figcaption>
-				This chart illustrates the total price of Residential sales over the last two decades. It also brings out that most of the properties were not flipped within the a period of two years of sale. Terms of flip are: short (< 6 months), medium (6 - 12 months), and long (12-24 months) term flips. This drives me to further explore what kinds of buildings are being flipped in a particular duration?
+					It is very important to develop an initial judgment of how the prices of residences have appreciated over the years in Boston. This chart illustrates the total price of Residential sales each year over the period 2000-2022. It brings out an intersting fact (contrary to expectation from reading the articles) that most of the properties were not flipped within the a period of two years of sale. Terms of flip are: short (< 6 months), medium (6 - 12 months), and long (12-24 months) term flips. This drives me to further explore what is the magnitude of flipping activity? And how much of it is in cash? Let's see Figure 3. We also notice a dip in sale prices in 2009 corresponding to recession period.
  
 				</figcaption>
 			</figure>
@@ -118,7 +119,8 @@
 			<figure>
 				<img src="Capture 3.PNG" alt="" style="width: 1200px; height: auto;"/>
 				<figcaption>
-				These two plots give us further insight in to the flip-activity. We can see that the activity of flipping was not very popular in 2000-2010 era. But after the global recession passed, flipping saw a sharp increase in popularity maximising around 2013 and then seeing a progressive decline. The flip horizon curve, more or less, goes with this trend. Also, the flipping activity increase was accompanied by more sales in cash which is not a characteristic behaviour of middle/ lower class home owners.
+					Flipping activity is defined as buying and selling the property in a short duration to make capital gains (for this dataset the perioad is 2 years). This plot uses a common timeline to show three important aspects related to flipping activity. <br>1. What % of total owned properties were flipped? <br>2. What was the average flip horizon (in days)?<br> 3. How many of these flip transactions were carried out in cash? <br>
+					Year 2000 has been excluded because that is the beginning of analysis. We can see that the activity of flipping was not very popular in 2000-2010 era. But after the global recession passed, flipping saw a sharp increase in popularity maximising around 2013 and then seeing a progressive decline. The flip horizon curve, more or less, goes with this trend. Also, the flipping activity increase was accompanied by more sales in cash which is not a characteristic behaviour of middle/ lower class home owners.
 				</figcaption>
 			</figure>
 
@@ -175,7 +177,11 @@
 		<section>
 			<h2>Summary</h2>
 
-			<p>WRITE FINAL SUMMARY HERE.</p>
+			<p>geographical mapping issue with tableau-OH.
+				field operations- median instead of mean or sum
+				minimalist design
+				things from lecture
+			</p>
 		</section>
 	</main>
 </body>
