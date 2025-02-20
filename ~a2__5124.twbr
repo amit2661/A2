@@ -2320,7 +2320,7 @@
             <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
             <column aggregation='Sum' caption='Zip' datatype='integer' default-format='*00000' name='[zip]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
           </datasource-dependencies>
-          <alphabetic-sort column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:zip:ok]' direction='ASC' />
+          <computed-sort column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:zip:ok]' direction='DESC' using='[federated.0dpax2p0rn4zi011mbz1x129v3of].[med:price:qk]' />
           <aggregation value='true' />
         </view>
         <style>
@@ -3788,6 +3788,34 @@
       <active id='-1' />
       <simple-id uuid='{364A5550-185A-4639-A15C-2A996F1AB246}' />
     </window>
+    <window class='worksheet' maximized='true' name='Sheet 12'>
+      <cards>
+        <edge name='left'>
+          <strip size='200'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='200'>
+            <card pane-specification-id='0' param='[federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:flip_ind:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D4B49F1D-67B3-4995-B619-1DAF5EE69C05}' />
+    </window>
     <window class='worksheet' name='Sheet 11'>
       <cards>
         <edge name='left'>
@@ -3886,34 +3914,6 @@
         </edge>
       </cards>
       <simple-id uuid='{C4ADA648-E8FC-4D5E-B855-5DA7877E0BC4}' />
-    </window>
-    <window class='worksheet' maximized='true' name='Sheet 12'>
-      <cards>
-        <edge name='left'>
-          <strip size='200'>
-            <card type='pages' />
-            <card type='filters' />
-            <card type='marks' />
-          </strip>
-        </edge>
-        <edge name='top'>
-          <strip size='2147483647'>
-            <card type='columns' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='rows' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='title' />
-          </strip>
-        </edge>
-        <edge name='right'>
-          <strip size='200'>
-            <card pane-specification-id='0' param='[federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:flip_ind:qk]' type='size' />
-          </strip>
-        </edge>
-      </cards>
-      <simple-id uuid='{D4B49F1D-67B3-4995-B619-1DAF5EE69C05}' />
     </window>
     <window class='worksheet' name='Sheet 13'>
       <cards>
