@@ -6,8 +6,6 @@
     <AccessibleZoneTabOrder />
     <AnimationOnByDefault />
     <AutoCreateAndUpdateDSDPhoneLayouts />
-    <IntuitiveSorting />
-    <IntuitiveSorting_SP2 />
     <MapboxVectorStylesAndLayers />
     <MarkAnimation />
     <ObjectModelEncapsulateLegacy />
@@ -1021,6 +1019,7 @@
       <column-instance column='[investor_type_purchase]' derivation='None' name='[none:investor_type_purchase:nk]' pivot='key' type='nominal' />
       <column-instance column='[investor_type_sale]' derivation='None' name='[none:investor_type_sale:nk]' pivot='key' type='nominal' />
       <column-instance column='[price_diff_pch]' derivation='None' name='[none:price_diff_pch:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[proptype]' derivation='None' name='[none:proptype:nk]' pivot='key' type='nominal' />
       <column-instance column='[yearbuilt]' derivation='None' name='[none:yearbuilt:qk]' pivot='key' type='quantitative' />
       <column-instance column='[zip]' derivation='None' name='[none:zip:ok]' pivot='key' type='ordinal' />
       <group hidden='true' name='[Exclusions (Price Diff Pch,Yearbuilt)]' name-style='unqualified' user:auto-column='exclude'>
@@ -2896,6 +2895,50 @@
               <bucket>&quot;5000 - 6000&quot;</bucket>
             </map>
           </encoding>
+          <encoding attr='color' field='[none:proptype:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;R2F&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;APT&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;IND&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;REC&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;R3F&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;LND&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;CNR&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;OTH&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;REO&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;R25&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;R1F&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;COM&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;RCD&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;EXM&quot;</bucket>
+            </map>
+          </encoding>
         </style-rule>
       </style>
       <semantic-values>
@@ -4459,39 +4502,78 @@
       <simple-id uuid='{9560C3CB-EADC-4ED0-836C-106E94044CDF}' />
     </worksheet>
     <worksheet name='Sheet 9'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Variance of Ownership status in different investor categories
+</run>
+          </formatted-text>
+        </title>
+      </layout-options>
       <table>
         <view>
           <datasources>
             <datasource caption='A2_EDA_Residential' name='federated.0dpax2p0rn4zi011mbz1x129v3of' />
           </datasources>
           <datasource-dependencies datasource='federated.0dpax2p0rn4zi011mbz1x129v3of'>
-            <column-instance column='[current_owner]' derivation='Avg' name='[avg:current_owner:qk]' pivot='key' type='quantitative' />
             <column caption='Current Owner' datatype='integer' name='[current_owner]' role='measure' type='quantitative' />
-            <column caption='Investor Type Purchase' datatype='string' name='[investor_type_purchase]' role='dimension' type='nominal' />
-            <column-instance column='[investor_type_purchase]' derivation='None' name='[none:investor_type_purchase:nk]' pivot='key' type='nominal' />
+            <column caption='Investor Type Sale Value' datatype='string' name='[investor_type_sale_value]' role='dimension' type='nominal' />
+            <column-instance column='[investor_type_sale_value]' derivation='None' name='[none:investor_type_sale_value:nk]' pivot='key' type='nominal' />
             <column-instance column='[proptype]' derivation='None' name='[none:proptype:nk]' pivot='key' type='nominal' />
             <column caption='Proptype' datatype='string' name='[proptype]' role='dimension' type='nominal' />
-            <column-instance column='[current_owner]' derivation='Sum' name='[sum:current_owner:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[current_owner]' derivation='Var' name='[var:current_owner:qk]' pivot='key' type='quantitative' />
           </datasource-dependencies>
-          <shelf-sorts>
-            <shelf-sort-v2 dimension-to-sort='[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:proptype:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:current_owner:qk]' shelf='columns' />
-          </shelf-sorts>
+          <manual-sort column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:investor_type_sale_value:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Institutional&quot;</bucket>
+              <bucket>&quot;Large&quot;</bucket>
+              <bucket>&quot;Medium&quot;</bucket>
+              <bucket>&quot;Small&quot;</bucket>
+              <bucket>&quot;Non-value investor&quot;</bucket>
+            </dictionary>
+          </manual-sort>
           <aggregation value='true' />
         </view>
-        <style />
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:investor_type_sale_value:nk]' value='123' />
+            <format attr='height' field='[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:investor_type_sale_value:nk]' value='36' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:investor_type_sale_value:nk]' value='188' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-orientation' field='[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:investor_type_sale_value:nk]' value='0' />
+          </style-rule>
+        </style>
         <panes>
           <pane selection-relaxation-option='selection-relaxation-allow'>
             <view>
               <breakdown value='auto' />
             </view>
-            <mark class='Automatic' />
+            <mark class='Circle' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
             <encodings>
-              <color column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:investor_type_purchase:nk]' />
+              <color column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:proptype:nk]' />
+              <lod column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:proptype:nk]' />
             </encodings>
+            <reference-line axis-column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[var:current_owner:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline0' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[var:current_owner:qk]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.44977900385856628' />
+                <format attr='mark-transparency' value='255' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#000000' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
           </pane>
         </panes>
-        <rows>[federated.0dpax2p0rn4zi011mbz1x129v3of].[avg:current_owner:qk]</rows>
-        <cols>[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:proptype:nk]</cols>
+        <rows>[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:investor_type_sale_value:nk]</rows>
+        <cols>[federated.0dpax2p0rn4zi011mbz1x129v3of].[var:current_owner:qk]</cols>
       </table>
       <simple-id uuid='{02B992D4-D6FD-462D-9E06-DF21831DD1E7}' />
     </worksheet>
@@ -4715,8 +4797,33 @@
       </devicelayouts>
       <simple-id uuid='{C3A2C1D0-32D0-46EF-8069-EA1F20694300}' />
     </dashboard>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 6'>
+      <style />
+      <size maxheight='560' maxwidth='1200' minheight='560' minwidth='1200' sizing-mode='fixed' />
+      <zones>
+        <zone h='70000' id='3' name='Sheet 9' w='84000' x='1833' y='893' />
+        <zone h='65179' id='4' name='Sheet 9' pane-specification-id='0' param='[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:proptype:nk]' type-v2='color' w='13083' x='86583' y='893' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='1' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{B079936E-1AED-4F75-9EAC-43A47F5A836A}' />
+    </dashboard>
   </dashboards>
-  <windows source-height='37'>
+  <windows source-height='30'>
     <window class='worksheet' name='Sheet 5'>
       <cards>
         <edge name='left'>
@@ -4891,7 +4998,7 @@
     <window class='worksheet' name='Sheet 8'>
       <cards>
         <edge name='left'>
-          <strip size='200'>
+          <strip size='250'>
             <card type='pages' />
             <card type='filters' />
             <card type='marks' />
@@ -4909,7 +5016,7 @@
           </strip>
         </edge>
         <edge name='right'>
-          <strip size='160'>
+          <strip size='200'>
             <card pane-specification-id='0' param='[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:investor_type_purchase:nk]' type='color' />
           </strip>
         </edge>
@@ -4931,7 +5038,7 @@
     <window class='worksheet' name='Sheet 16'>
       <cards>
         <edge name='left'>
-          <strip size='160'>
+          <strip size='200'>
             <card type='pages' />
             <card type='filters' />
             <card type='marks' />
@@ -4949,7 +5056,7 @@
           </strip>
         </edge>
         <edge name='right'>
-          <strip size='160'>
+          <strip size='200'>
             <card pane-specification-id='2' param='[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:Calculation_464433760831729664:nk]' type='size' />
           </strip>
         </edge>
@@ -4968,35 +5075,44 @@
     <window class='worksheet' maximized='true' name='Sheet 9'>
       <cards>
         <edge name='left'>
-          <strip size='200'>
+          <strip size='250'>
             <card type='pages' />
             <card type='filters' />
             <card type='marks' />
           </strip>
         </edge>
         <edge name='top'>
-          <strip size='2147483647'>
+          <strip size='38'>
             <card type='columns' />
           </strip>
-          <strip size='2147483647'>
+          <strip size='38'>
             <card type='rows' />
           </strip>
-          <strip size='2147483647'>
+          <strip size='38'>
             <card type='title' />
           </strip>
         </edge>
         <edge name='right'>
-          <strip size='200'>
-            <card pane-specification-id='0' param='[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:investor_type_purchase:nk]' type='color' />
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:proptype:nk]' type='color' />
           </strip>
         </edge>
       </cards>
       <simple-id uuid='{C4ADA648-E8FC-4D5E-B855-5DA7877E0BC4}' />
     </window>
+    <window class='dashboard' name='Dashboard 6'>
+      <viewpoints>
+        <viewpoint name='Sheet 9'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='3' />
+      <simple-id uuid='{7E03EF5B-1E83-470A-9209-55F35B876D99}' />
+    </window>
     <window class='worksheet' name='Sheet 13'>
       <cards>
         <edge name='left'>
-          <strip size='200'>
+          <strip size='250'>
             <card type='pages' />
             <card type='filters' />
             <card type='marks' />
@@ -5014,7 +5130,7 @@
           </strip>
         </edge>
         <edge name='right'>
-          <strip size='200'>
+          <strip size='250'>
             <card pane-specification-id='0' param='[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:investor_type_purchase:nk]' type='color' />
           </strip>
         </edge>
@@ -5027,7 +5143,7 @@
     <window class='worksheet' name='Sheet 14'>
       <cards>
         <edge name='left'>
-          <strip size='160'>
+          <strip size='200'>
             <card type='pages' />
             <card type='filters' />
             <card type='marks' />
@@ -5045,7 +5161,7 @@
           </strip>
         </edge>
         <edge name='right'>
-          <strip size='160'>
+          <strip size='200'>
             <card pane-specification-id='0' param='[federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:price_diff_pch:qk]' type='color' />
           </strip>
         </edge>
@@ -5055,7 +5171,7 @@
     <window class='worksheet' name='Sheet 15'>
       <cards>
         <edge name='left'>
-          <strip size='160'>
+          <strip size='200'>
             <card type='pages' />
             <card type='filters' />
             <card type='marks' />
