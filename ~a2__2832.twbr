@@ -3505,7 +3505,7 @@
       <size maxheight='833' maxwidth='750' minheight='833' minwidth='750' sizing-mode='fixed' />
       <zones>
         <zone h='61631' id='3' name='Sheet 7' w='96769' x='2462' y='1559' />
-        <zone h='10564' id='4' name='Sheet 7' pane-specification-id='1' param='[federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:cash_sale:qk]' type-v2='color' w='25333' x='18000' y='10924' />
+        <zone h='10564' id='4' name='Sheet 7' pane-specification-id='1' param='[federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:cash_sale:qk]' type-v2='color' w='25333' x='16000' y='14646' />
       </zones>
       <devicelayouts>
         <devicelayout auto-generated='true' name='Phone'>
@@ -3708,7 +3708,7 @@
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='-1' />
+      <active id='4' />
       <simple-id uuid='{364A5550-185A-4639-A15C-2A996F1AB246}' />
     </window>
     <window class='worksheet' name='Sheet 9'>
