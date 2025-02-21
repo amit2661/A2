@@ -931,6 +931,12 @@
         </metadata-records>
       </connection>
       <aliases enabled='yes' />
+      <column datatype='string' name='[:Measure Names]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;[federated.0dpax2p0rn4zi011mbz1x129v3of].[med:price_diff_pch:qk]&quot;' value='Median [Price Difference] (in %)' />
+          <alias key='&quot;[federated.0dpax2p0rn4zi011mbz1x129v3of].[usr:Calculation_964896269548179457:qk]&quot;' value='Median [Flip Horizon] (in months)' />
+        </aliases>
+      </column>
       <column aggregation='None' datatype='integer' name='[Bathrooms (bin)]' role='dimension' type='quantitative'>
         <calculation class='bin' decimals='0' formula='[bathrooms]' peg='0' size='1.97' />
       </column>
@@ -987,7 +993,7 @@
       <column aggregation='Avg' caption='Lat' datatype='real' name='[lat]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
       <column aggregation='Avg' caption='Lon' datatype='real' name='[lon]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
       <column caption='Lotsize' datatype='integer' name='[lotsize]' role='measure' type='quantitative' />
-      <column caption='Month Horizon' datatype='string' name='[month_horizon]' role='dimension' type='nominal' />
+      <column aggregation='CountD' caption='Month Horizon' datatype='string' default-role='measure' default-type='quantitative' name='[month_horizon]' role='dimension' type='nominal' />
       <column caption='Mortgage' datatype='real' name='[mortgage]' role='measure' type='quantitative' />
       <column caption='Price' datatype='real' name='[price]' role='measure' type='quantitative' />
       <column caption='Price Diff' datatype='real' name='[price_diff]' role='measure' type='quantitative' />
@@ -1013,6 +1019,12 @@
       <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
       <column caption='Yearbuilt' datatype='integer' name='[yearbuilt]' role='measure' type='quantitative' />
       <column aggregation='Sum' caption='Zip' datatype='integer' default-format='*00000' name='[zip]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <column-instance column='[flip_horizon]' derivation='Avg' name='[avg:flip_horizon:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[month_horizon]' derivation='CountD' name='[ctd:month_horizon:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[flip_horizon]' derivation='Median' name='[med:flip_horizon:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[intersf]' derivation='Median' name='[med:intersf:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[price]' derivation='Median' name='[med:price:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[price_diff_pch]' derivation='Median' name='[med:price_diff_pch:qk]' pivot='key' type='quantitative' />
       <column-instance column='[Calculation_407857289913409536]' derivation='None' name='[none:Calculation_407857289913409536:nk]' pivot='key' type='nominal' />
       <column-instance column='[Calculation_464433760831729664]' derivation='None' name='[none:Calculation_464433760831729664:nk]' pivot='key' type='nominal' />
       <column-instance column='[flip_term]' derivation='None' name='[none:flip_term:nk]' pivot='key' type='nominal' />
@@ -1023,6 +1035,8 @@
       <column-instance column='[proptype]' derivation='None' name='[none:proptype:nk]' pivot='key' type='nominal' />
       <column-instance column='[yearbuilt]' derivation='None' name='[none:yearbuilt:qk]' pivot='key' type='quantitative' />
       <column-instance column='[zip]' derivation='None' name='[none:zip:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[flip_horizon]' derivation='Sum' name='[sum:flip_horizon:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[intersf]' derivation='Sum' name='[sum:intersf:qk]' pivot='key' type='quantitative' />
       <group hidden='true' name='[Exclusions (Price Diff Pch,Yearbuilt)]' name-style='unqualified' user:auto-column='exclude'>
         <groupfilter function='crossjoin'>
           <groupfilter function='level-members' level='[none:price_diff_pch:qk]' />
@@ -2957,6 +2971,38 @@
               <bucket>&quot;Large&quot;</bucket>
             </map>
           </encoding>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0dpax2p0rn4zi011mbz1x129v3of].[med:price:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.0dpax2p0rn4zi011mbz1x129v3of].[ctd:month_horizon:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0dpax2p0rn4zi011mbz1x129v3of].[avg:flip_horizon:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0dpax2p0rn4zi011mbz1x129v3of].[med:flip_horizon:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:flip_horizon:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0dpax2p0rn4zi011mbz1x129v3of].[usr:Calculation_964896269547995136:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0dpax2p0rn4zi011mbz1x129v3of].[usr:Calculation_964896269548179457:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0dpax2p0rn4zi011mbz1x129v3of].[med:intersf:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:intersf:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0dpax2p0rn4zi011mbz1x129v3of].[med:price_diff_pch:qk]&quot;</bucket>
+            </map>
+          </encoding>
         </style-rule>
       </style>
       <semantic-values>
@@ -3733,17 +3779,32 @@
           <datasources>
             <datasource caption='A2_EDA_Residential' name='federated.0dpax2p0rn4zi011mbz1x129v3of' />
           </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
           <datasource-dependencies datasource='federated.0dpax2p0rn4zi011mbz1x129v3of'>
-            <column caption='Flip Ind' datatype='integer' name='[flip_ind]' role='measure' type='quantitative' />
+            <column-instance column='[price_diff_pch]' derivation='None' name='[none:price_diff_pch:qk]' pivot='key' type='quantitative' />
             <column-instance column='[zip]' derivation='None' name='[none:zip:ok]' pivot='key' type='ordinal' />
             <column caption='Price Diff Pch' datatype='real' name='[price_diff_pch]' role='measure' type='quantitative' />
-            <column-instance column='[flip_ind]' derivation='Sum' name='[sum:flip_ind:qk]' pivot='key' type='quantitative' />
-            <column-instance column='[price_diff_pch]' derivation='Sum' name='[sum:price_diff_pch:qk]' pivot='key' type='quantitative' />
             <column aggregation='Sum' caption='Zip' datatype='integer' default-format='*00000' name='[zip]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
           </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:price_diff_pch:qk]' included-values='in-range'>
+            <max>500.0</max>
+          </filter>
+          <slices>
+            <column>[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:price_diff_pch:qk]</column>
+          </slices>
           <aggregation value='true' />
         </view>
-        <style />
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0dpax2p0rn4zi011mbz1x129v3of].[Longitude (generated)]' field-type='quantitative' max='-7901082.5043689152' min='-7921012.9158700481' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0dpax2p0rn4zi011mbz1x129v3of].[Latitude (generated)]' field-type='quantitative' max='5218997.1110150917' min='5208385.8009329792' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
         <panes>
           <pane selection-relaxation-option='selection-relaxation-allow'>
             <view>
@@ -3751,12 +3812,13 @@
             </view>
             <mark class='Automatic' />
             <encodings>
-              <color column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:price_diff_pch:qk]' />
+              <size column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:price_diff_pch:qk]' />
+              <lod column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:zip:ok]' />
             </encodings>
           </pane>
         </panes>
-        <rows>[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:zip:ok]</rows>
-        <cols>[federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:flip_ind:qk]</cols>
+        <rows>[federated.0dpax2p0rn4zi011mbz1x129v3of].[Latitude (generated)]</rows>
+        <cols>[federated.0dpax2p0rn4zi011mbz1x129v3of].[Longitude (generated)]</cols>
       </table>
       <simple-id uuid='{446FD24C-0A6D-439D-80BE-6B2788917E0C}' />
     </worksheet>
@@ -3767,361 +3829,66 @@
             <datasource caption='A2_EDA_Residential' name='federated.0dpax2p0rn4zi011mbz1x129v3of' />
           </datasources>
           <datasource-dependencies datasource='federated.0dpax2p0rn4zi011mbz1x129v3of'>
-            <column-instance column='[price_diff_pch]' derivation='None' name='[none:price_diff_pch:qk]' pivot='key' type='quantitative' />
-            <column-instance column='[yearbuilt]' derivation='None' name='[none:yearbuilt:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[price_diff_pch]' derivation='Median' name='[med:price_diff_pch:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[street]' derivation='None' name='[none:street:nk]' pivot='key' type='nominal' />
             <column caption='Price Diff Pch' datatype='real' name='[price_diff_pch]' role='measure' type='quantitative' />
-            <column caption='Yearbuilt' datatype='integer' name='[yearbuilt]' role='measure' type='quantitative' />
+            <column caption='Street' datatype='string' name='[street]' role='dimension' type='nominal' />
           </datasource-dependencies>
-          <filter class='categorical' column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[Exclusions (Price Diff Pch,Yearbuilt)]'>
-            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
-              <groupfilter function='crossjoin'>
-                <groupfilter function='level-members' level='[none:price_diff_pch:qk]' />
-                <groupfilter function='level-members' level='[none:yearbuilt:qk]' />
-              </groupfilter>
-              <groupfilter function='reorder-dimensionality'>
-                <groupfilter function='crossjoin'>
-                  <groupfilter function='member' level='[none:yearbuilt:qk]' member='0' />
-                  <groupfilter function='union'>
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-100.0' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-91.659999999999997' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-86.099999999999994' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-83.219999999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-82.349999999999994' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-80.0' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-75.030000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-75.0' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-68.75' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-66.670000000000002' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-65.519999999999996' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-63.149999999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-61.539999999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-56.090000000000003' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-54.460000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-51.670000000000002' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-51.329999999999998' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-48.880000000000003' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-48.329999999999998' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-45.920000000000002' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-43.200000000000003' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-42.5' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-41.18' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-40.289999999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-36.689999999999998' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-33.93' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-32.460000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-31.899999999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-30.75' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-26.469999999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-25.600000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-24.350000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-24.0' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-23.079999999999998' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-22.760000000000002' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-21.18' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-20.0' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-19.640000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-19.440000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-19.170000000000002' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-18.34' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-17.91' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-17.219999999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-16.670000000000002' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-12.890000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-12.789999999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-12.06' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-11.890000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-11.67' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-11.109999999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-10.42' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-10.289999999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-8.8100000000000005' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-8.6999999999999993' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-7.6899999999999995' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-7.4100000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-7.3300000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-7.1799999999999997' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-4.7800000000000002' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-4.0599999999999996' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-2.0' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-1.8199999999999998' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='-1.25' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='0.0' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='0.68000000000000005' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='1.3100000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='1.8199999999999998' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='1.96' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='2.7800000000000002' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='4.0' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='4.5499999999999998' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='4.7599999999999998' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='5.0899999999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='5.2599999999999998' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='5.4500000000000002' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='5.4900000000000002' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='5.5600000000000005' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='5.9500000000000002' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='6.0599999999999996' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='6.25' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='6.4500000000000002' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='6.6699999999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='7.0599999999999996' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='7.1399999999999997' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='7.5' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='7.9399999999999995' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='8.3300000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='8.3699999999999992' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='8.4700000000000006' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='8.6999999999999993' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='8.75' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='9.0899999999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='9.5199999999999996' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='9.5899999999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='10.26' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='10.34' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='10.640000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='10.83' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='11.109999999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='11.630000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='12.5' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='12.94' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='13.26' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='13.33' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='13.48' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='13.75' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='14.0' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='14.15' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='14.16' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='14.289999999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='14.710000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='14.859999999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='15.68' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='16.440000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='16.670000000000002' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='16.75' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='17.5' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='17.649999999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='17.940000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='17.989999999999998' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='18.359999999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='19.780000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='20.0' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='20.690000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='21.460000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='21.949999999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='22.449999999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='22.73' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='23.170000000000002' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='23.329999999999998' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='23.789999999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='23.899999999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='24.489999999999998' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='24.690000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='24.940000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='25.0' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='25.57' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='25.93' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='26.32' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='26.57' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='27.329999999999998' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='27.649999999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='27.66' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='27.91' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='28.0' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='28.210000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='29.140000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='29.23' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='29.329999999999998' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='30.0' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='30.77' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='31.07' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='31.25' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='31.579999999999998' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='32.350000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='32.799999999999997' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='32.920000000000002' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='32.93' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='33.049999999999997' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='33.57' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='34.170000000000002' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='34.920000000000002' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='35.140000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='35.229999999999997' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='36.590000000000003' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='36.990000000000002' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='37.0' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='37.719999999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='37.93' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='39.329999999999998' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='40.0' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='40.350000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='41.299999999999997' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='41.670000000000002' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='42.380000000000003' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='42.560000000000002' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='42.859999999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='43.009999999999998' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='43.590000000000003' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='43.75' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='44.740000000000002' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='45.329999999999998' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='45.450000000000003' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='46.340000000000003' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='46.689999999999998' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='47.060000000000002' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='47.829999999999998' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='49.640000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='50.0' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='50.880000000000003' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='50.939999999999998' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='51.68' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='51.82' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='53.350000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='53.850000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='54.270000000000003' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='54.840000000000003' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='57.43' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='58.229999999999997' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='63.640000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='66.25' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='66.670000000000002' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='68.099999999999994' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='70.079999999999998' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='71.049999999999997' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='73.579999999999998' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='75.0' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='75.230000000000004' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='75.439999999999998' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='75.950000000000003' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='76.469999999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='79.310000000000002' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='80.0' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='80.370000000000005' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='81.189999999999998' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='82.0' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='82.140000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='82.280000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='83.329999999999998' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='83.560000000000002' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='85.709999999999994' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='85.859999999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='86.670000000000002' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='87.010000000000005' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='87.459999999999994' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='87.5' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='88.680000000000007' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='88.890000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='89.390000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='90.0' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='91.180000000000007' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='91.299999999999997' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='91.700000000000003' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='92.310000000000002' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='92.5' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='92.959999999999994' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='93.75' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='95.0' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='96.430000000000007' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='97.060000000000002' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='97.370000000000005' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='100.0' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='104.3' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='104.69' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='105.0' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='105.54000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='105.67' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='106.25' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='106.36' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='110.09999999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='111.23999999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='113.14' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='114.29000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='116.67' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='118.25' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='119.18000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='119.3' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='119.51000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='120.43000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='122.22' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='125.0' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='126.67' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='135.28999999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='137.0' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='140.0' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='146.66999999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='150.91' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='163.63999999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='166.66999999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='168.28999999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='169.13' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='175.09' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='176.47' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='180.0' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='183.33000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='187.5' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='200.0' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='201.28999999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='208.33000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='228.0' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='228.63' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='233.33000000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='262.31999999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='263.63999999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='313.32999999999998' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='316.67000000000002' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='324.69' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='336.12' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='347.92000000000002' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='365.63' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='400.0' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='426.19' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='441.67000000000002' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='447.91000000000003' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='477.77999999999997' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='533.72000000000003' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='596.63' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='689.60000000000002' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='700.0' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='727.59000000000003' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='850.0' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='938.22000000000003' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='978.44000000000005' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='1097.9200000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='1980.6500000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='3780.0' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='4823.0799999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='5852.3800000000001' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='7489.3699999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='15790.0' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='50226.800000000003' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='131258.01999999999' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='178714.69' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='53924800.0' />
-                    <groupfilter function='member' level='[none:price_diff_pch:qk]' member='389999900.0' />
-                  </groupfilter>
-                </groupfilter>
-                <order>
-                  <hierarchy name='[none:price_diff_pch:qk]' />
-                  <hierarchy name='[none:yearbuilt:qk]' />
-                </order>
-              </groupfilter>
-            </groupfilter>
-          </filter>
-          <slices>
-            <column>[federated.0dpax2p0rn4zi011mbz1x129v3of].[Exclusions (Price Diff Pch,Yearbuilt)]</column>
-          </slices>
           <aggregation value='true' />
         </view>
-        <style />
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.0dpax2p0rn4zi011mbz1x129v3of].[med:price_diff_pch:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
         <panes>
           <pane selection-relaxation-option='selection-relaxation-allow'>
             <view>
-              <breakdown value='auto' />
+              <breakdown value='on' />
             </view>
             <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[med:price_diff_pch:qk]' />
+              <color column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[med:price_diff_pch:qk]' />
+              <text column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:street:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
           </pane>
         </panes>
-        <rows>[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:yearbuilt:qk]</rows>
-        <cols>[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:price_diff_pch:qk]</cols>
+        <rows />
+        <cols />
+        <mark-labels>
+          <mark-label id='0' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields />
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0dpax2p0rn4zi011mbz1x129v3of].[med:price_diff_pch:qk]</field>
+                  <field>[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:street:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>600.0</value>
+                <value>&quot;Fairfield Pl&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
       </table>
       <simple-id uuid='{175FFA71-C6EA-4B09-A4F4-257280F5E71A}' />
     </worksheet>
@@ -4201,44 +3968,84 @@
       <simple-id uuid='{E9499054-7D9A-47D2-B72F-6D43D999BE98}' />
     </worksheet>
     <worksheet name='Sheet 17'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Flip Time Horizon and Price change of Residential Properties
+</run>
+          </formatted-text>
+        </title>
+      </layout-options>
       <table>
         <view>
-          <datasources />
+          <datasources>
+            <datasource caption='A2_EDA_Residential' name='federated.0dpax2p0rn4zi011mbz1x129v3of' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0dpax2p0rn4zi011mbz1x129v3of'>
+            <column caption='MEDIAN([Flip Horizon]/30)' datatype='real' name='[Calculation_964896269548179457]' role='measure' type='quantitative' user:unnamed='Sheet 17'>
+              <calculation class='tableau' formula='MEDIAN([flip_horizon]/30)' />
+            </column>
+            <column caption='Flip Horizon' datatype='integer' name='[flip_horizon]' role='measure' type='quantitative' />
+            <column-instance column='[price_diff_pch]' derivation='Median' name='[med:price_diff_pch:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[year]' derivation='None' name='[none:year:qk]' pivot='key' type='quantitative' />
+            <column caption='Price Diff Pch' datatype='real' name='[price_diff_pch]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_964896269548179457]' derivation='User' name='[usr:Calculation_964896269548179457:qk]' pivot='key' type='quantitative' />
+            <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
           <aggregation value='true' />
         </view>
-        <style />
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0dpax2p0rn4zi011mbz1x129v3of].[med:price_diff_pch:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+            <format attr='title' class='0' field='[federated.0dpax2p0rn4zi011mbz1x129v3of].[usr:Calculation_964896269548179457:qk]' scope='rows' value='Median [Flip Horizon] (in months)' />
+            <format attr='title' class='0' field='[federated.0dpax2p0rn4zi011mbz1x129v3of].[med:price_diff_pch:qk]' scope='rows' value='Median [Price Difference] (in %)' />
+            <encoding attr='space' class='0' field='[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:year:qk]' field-type='quantitative' max='2023' min='1999' range-type='fixed' scope='cols' type='space' />
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='col-width' field='[federated.0dpax2p0rn4zi011mbz1x129v3of].[:Measure Names]' value='240' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.0dpax2p0rn4zi011mbz1x129v3of].[:Measure Names]' value='Legend'>
+              <formatted-text>
+                <run>Legend</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
         <panes>
           <pane selection-relaxation-option='selection-relaxation-allow'>
             <view>
               <breakdown value='auto' />
             </view>
             <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0dpax2p0rn4zi011mbz1x129v3of].[usr:Calculation_964896269548179457:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0dpax2p0rn4zi011mbz1x129v3of].[med:price_diff_pch:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0dpax2p0rn4zi011mbz1x129v3of].[:Measure Names]' />
+            </encodings>
           </pane>
         </panes>
-        <rows />
-        <cols />
+        <rows>([federated.0dpax2p0rn4zi011mbz1x129v3of].[usr:Calculation_964896269548179457:qk] + [federated.0dpax2p0rn4zi011mbz1x129v3of].[med:price_diff_pch:qk])</rows>
+        <cols>[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:year:qk]</cols>
       </table>
       <simple-id uuid='{D80C9D25-44E7-4841-8227-6F3E3B45D1D5}' />
-    </worksheet>
-    <worksheet name='Sheet 18'>
-      <table>
-        <view>
-          <datasources />
-          <aggregation value='true' />
-        </view>
-        <style />
-        <panes>
-          <pane selection-relaxation-option='selection-relaxation-allow'>
-            <view>
-              <breakdown value='auto' />
-            </view>
-            <mark class='Automatic' />
-          </pane>
-        </panes>
-        <rows />
-        <cols />
-      </table>
-      <simple-id uuid='{C7A46DE3-135E-424E-9F2C-E98FF6CF2F7A}' />
     </worksheet>
     <worksheet name='Sheet 5'>
       <layout-options>
@@ -4933,6 +4740,31 @@
       </devicelayouts>
       <simple-id uuid='{6FEFE8AD-DFAB-4A23-BF8B-ACF21A49E80B}' />
     </dashboard>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 8'>
+      <style />
+      <size maxheight='800' maxwidth='1200' minheight='800' minwidth='1200' sizing-mode='fixed' />
+      <zones>
+        <zone h='93625' id='3' name='Sheet 17' w='98500' x='750' y='1250' />
+        <zone h='17375' id='4' name='Sheet 17' pane-specification-id='1' param='[federated.0dpax2p0rn4zi011mbz1x129v3of].[:Measure Names]' type-v2='color' w='23917' x='8500' y='9875' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='1' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{C6EBCFF1-F2C0-4D11-9188-80DB8154AB11}' />
+    </dashboard>
   </dashboards>
   <windows source-height='30'>
     <window class='worksheet' name='Sheet 5'>
@@ -5220,7 +5052,7 @@
       <active id='3' />
       <simple-id uuid='{7E03EF5B-1E83-470A-9209-55F35B876D99}' />
     </window>
-    <window class='worksheet' maximized='true' name='Sheet 13'>
+    <window class='worksheet' name='Sheet 13'>
       <cards>
         <edge name='left'>
           <strip size='250'>
@@ -5261,52 +5093,63 @@
     <window class='worksheet' name='Sheet 14'>
       <cards>
         <edge name='left'>
-          <strip size='200'>
+          <strip size='160'>
             <card type='pages' />
             <card type='filters' />
             <card type='marks' />
           </strip>
         </edge>
         <edge name='top'>
-          <strip size='38'>
+          <strip size='2147483647'>
             <card type='columns' />
           </strip>
-          <strip size='38'>
+          <strip size='2147483647'>
             <card type='rows' />
           </strip>
-          <strip size='38'>
+          <strip size='2147483647'>
             <card type='title' />
           </strip>
         </edge>
         <edge name='right'>
-          <strip size='200'>
-            <card pane-specification-id='0' param='[federated.0dpax2p0rn4zi011mbz1x129v3of].[sum:price_diff_pch:qk]' type='color' />
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0dpax2p0rn4zi011mbz1x129v3of].[none:price_diff_pch:qk]' type='size' />
           </strip>
         </edge>
       </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
       <simple-id uuid='{079F83BA-EF63-4A5E-9BE0-0297F457D555}' />
     </window>
     <window class='worksheet' name='Sheet 15'>
       <cards>
         <edge name='left'>
-          <strip size='200'>
+          <strip size='160'>
             <card type='pages' />
             <card type='filters' />
             <card type='marks' />
           </strip>
         </edge>
         <edge name='top'>
-          <strip size='38'>
+          <strip size='2147483647'>
             <card type='columns' />
           </strip>
-          <strip size='38'>
+          <strip size='2147483647'>
             <card type='rows' />
           </strip>
-          <strip size='38'>
+          <strip size='2147483647'>
             <card type='title' />
           </strip>
         </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0dpax2p0rn4zi011mbz1x129v3of].[med:price_diff_pch:qk]' type='color' />
+          </strip>
+        </edge>
       </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
       <simple-id uuid='{D55E82D4-D329-4C96-B0F5-055D2480AF37}' />
     </window>
     <window class='worksheet' name='Sheet 17'>
@@ -5319,41 +5162,35 @@
           </strip>
         </edge>
         <edge name='top'>
-          <strip size='2147483647'>
+          <strip size='38'>
             <card type='columns' />
           </strip>
-          <strip size='2147483647'>
+          <strip size='38'>
             <card type='rows' />
           </strip>
-          <strip size='31'>
+          <strip size='2147483647'>
             <card type='title' />
           </strip>
         </edge>
+        <edge name='right'>
+          <strip size='180'>
+            <card pane-specification-id='1' param='[federated.0dpax2p0rn4zi011mbz1x129v3of].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
       </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
       <simple-id uuid='{F1C085C0-0B46-435C-ADE7-6C9259745411}' />
     </window>
-    <window class='worksheet' name='Sheet 18'>
-      <cards>
-        <edge name='left'>
-          <strip size='160'>
-            <card type='pages' />
-            <card type='filters' />
-            <card type='marks' />
-          </strip>
-        </edge>
-        <edge name='top'>
-          <strip size='2147483647'>
-            <card type='columns' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='rows' />
-          </strip>
-          <strip size='31'>
-            <card type='title' />
-          </strip>
-        </edge>
-      </cards>
-      <simple-id uuid='{B5D38B31-EA2E-4CE4-99B9-AA2CBAC19BE1}' />
+    <window class='dashboard' maximized='true' name='Dashboard 8'>
+      <viewpoints>
+        <viewpoint name='Sheet 17'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{D3922B6E-A5E8-4626-94EA-A5E50675EA13}' />
     </window>
   </windows>
 </workbook>
